@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: WEBSITE_NAME,
         description: META_DESCRIPTION,
-        url: 'https://www.syedamaham.dev',
+        url: 'https://serenity-blog.vercel.app/',
         siteName: WEBSITE_NAME,
         images: [
           {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
             url: './blog-banner.png',
             width: 1800,
             height: 1600,
-            alt: 'Syeda Maham Fahim',
+            alt: 'Seren Mosaic',
           },
         ],
         locale: 'en_US',
@@ -79,7 +79,7 @@ export default async function Home() {
                 <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                     <div className={"flex flex-wrap"}>
                         <h1 className='mb-5 w-full px-3 text-xl font-bold md:text-3xl'>
-                            EXPLORE LATEST SNIPPETS
+                            PRESS RELEASE
                         </h1>
                         <hr className='border-1 mx-auto mb-5 w-[98%]' />
                         {allSnippets?.length > 0 ? (

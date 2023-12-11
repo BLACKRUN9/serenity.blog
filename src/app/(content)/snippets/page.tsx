@@ -6,9 +6,9 @@ import { SanityDocument } from "@sanity/client";
 import { snippetsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 export const metadata: Metadata = {
-  title:'snippets',
-  description: `Explore tech snippets by ${WEBSITE_NAME}. Discover quick tips, code examples, and insights for your coding journey.`,
-  keywords: 'tech snippets, quick tips, code examples, coding insights',
+  title:'press-release',
+  description: `Explore Press Release by ${WEBSITE_NAME}. Discover quick tips, code examples, and insights for your coding journey.`,
+  keywords: 'press release, crypto, news, insights',
 };
 
 

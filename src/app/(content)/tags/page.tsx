@@ -9,7 +9,7 @@ import { sanityFetch } from "@/sanity/lib/sanityFetch";
 export const metadata: Metadata = {
     title: "Tags",
     description: `Explore ${WEBSITE_NAME} tagged content. Navigate through our tech insights and coding expertise based on specific tags.`,
-    keywords: "tags, tech insights, coding expertise, specific topics",
+    keywords: "bitcoin, news, web3, Airdrop Update, new airdrop, crypto insight,",
 };
 
 const Tags = async () => {
@@ -23,9 +23,9 @@ const Tags = async () => {
 
                 <Text
                     title
-                    className='mb-5 mt-10 text-appPurple-100 dark:text-appRed-100'
+                    className='mb-5 mt-10 text-appPurple-700 dark:text-appRed-100'
                 >
-                    Tags 💡
+                    Tags ‼️
                 </Text>
                 <div className='flex flex-wrap items-center justify-start'>
                   

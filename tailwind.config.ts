@@ -27,10 +27,13 @@ const tailwind = {
 
       colors: {
        appPurple:{
-        100:'#7868E6'
+        100:'#FBDFAF'
        },
        appRed:{
-        100:'#FF4D4F'
+        100:'#F98000'
+       },
+       bgSeren:{
+        100: '#00EBBB'
        },
        blogText:{
         100:"rgb(222 226 227)"
