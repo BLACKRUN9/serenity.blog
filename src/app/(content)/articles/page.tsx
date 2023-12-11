@@ -8,7 +8,7 @@ import { sanityFetch } from "@/sanity/lib/sanityFetch";
 
 export const metadata: Metadata = {
     title: "Articles",
-    description: `Dive into insightful articles by ${WEBSITE_NAME}. Explore tech, coding, and innovation through our expert perspectives.`,
+    description: `Dive into insightful articles by ${WEBSITE_NAME}. Web3, article, Crypto, insight.`,
     keywords: META_SEO_KEYWORDS,
 };
 

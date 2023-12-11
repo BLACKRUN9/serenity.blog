@@ -1,4 +1,4 @@
-const openSource = [
+const airdropList = [
     {
       title: 'Blog Theme',
       url: '/url',
@@ -25,5 +25,5 @@ const openSource = [
     },
   ];
   
-export default openSource;
+export default airdropList;
   

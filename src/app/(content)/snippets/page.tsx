@@ -6,7 +6,7 @@ import { SanityDocument } from "@sanity/client";
 import { snippetsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 export const metadata: Metadata = {
-  title:'Snippets',
+  title:'snippets',
   description: `Explore tech snippets by ${WEBSITE_NAME}. Discover quick tips, code examples, and insights for your coding journey.`,
   keywords: 'tech snippets, quick tips, code examples, coding insights',
 };
@@ -26,7 +26,7 @@ const Snippets = async () => {
           title
           className="mb-8 mt-10 dark:text-appRed-100 text-appPurple-100"
         >
-          Snippets 🚀 
+          Press Release 🚀 
         </Text>
         <div className="flex flex-wrap">
           {
@@ -36,7 +36,7 @@ const Snippets = async () => {
          snippets={allSnippets}
          noOfSnippet={9}
          />
-            ) : <p>No Snippets Found</p>
+            ) : <p>No Press Release</p>
           }
          
         </div>

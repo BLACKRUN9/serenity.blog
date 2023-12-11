@@ -23,6 +23,6 @@
       "@/*": ["./src/*","./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/data/footerLinks.js", "src/components/Notion/NotionPage/NotionPage.tsx", "src/components/Notion/NotionPage/Code.jsx", "sanity/components/ExternalLinkRenderer.js", "src/components/Article/ArticleContent/ArticePortableText.jsx", "src/components/Article/ArticleContent/ArticleContent.jsx", "src/components/Article/ArticleContent/PortableComponent.js", "src/app/sitemap.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/data/footerLinks.js", "src/components/Notion/NotionPage/NotionPage.tsx", "src/components/Notion/NotionPage/Code.jsx", "sanity/components/ExternalLinkRenderer.tsx", "src/components/Article/ArticleContent/ArticePortableText.jsx", "src/components/Article/ArticleContent/ArticleContent.jsx", "src/components/Article/ArticleContent/PortableComponent.js", "src/app/sitemap.js"],
   "exclude": ["node_modules"]
 }

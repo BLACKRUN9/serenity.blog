@@ -5,12 +5,12 @@ export default function GitHubComment() {
     return (
       <Giscus
         id="comments"
-        repo="SyedaMahamFahim/syedamaham.dev"
+        repo="BLACKRUN9/serenity.blog"
         repoId={`${process.env.NEXT_PUBLIC_GITHUB_COMMENT_REPO_ID}`}
         category="Comments"
         categoryId={process.env.NEXT_PUBLIC_GITHUB_COMMENT_CATEGORY_ID}
         mapping="url"
-        term="Welcome to Maham's blog"
+        term="Welcome to Seren Mosaic"
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="top"

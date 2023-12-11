@@ -1,9 +1,10 @@
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillLinkedin,
   AiFillMediumSquare
 } from "react-icons/ai";
+import { FaTelegram } from "react-icons/fa";
+
 
 const footerLinks = {
   
@@ -42,7 +43,7 @@ const footerLinks = {
       
       {
         name:"Linkedin",
-        url:"https://www.linkedin.com/in/syedamahamfahim/",
+        url:"https://www.linkedin.com/in/serenity-mosaic-09b625288/",
         icons:<AiFillLinkedin/>
       },
       {
@@ -51,9 +52,9 @@ const footerLinks = {
         icons:<AiFillGithub/>
       },
       {
-        name:"Twitter",
-        url:"https://twitter.com/0xSyedaMaham",
-        icons:<AiOutlineTwitter/>
+        name:"Telegram",
+        url:"https://t.me/serenitymosaic",
+        icons:<FaTelegram />
       },
       {
         name:"Medium",

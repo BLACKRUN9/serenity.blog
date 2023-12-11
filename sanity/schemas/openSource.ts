@@ -1,8 +1,8 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'openSource',
-  title: 'Open Source',
+  name: 'airdropList',
+  title: 'AirdropList',
   type: 'document',
   fields: [
     defineField({

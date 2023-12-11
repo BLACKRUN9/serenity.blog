@@ -9,7 +9,7 @@ import { sanityFetch } from "@/sanity/lib/sanityFetch";
 export const metadata: Metadata = {
   title:'Profiles',
   description: `Get to know the ${WEBSITE_NAME} team better through our profiles. Explore our expertise in technology, coding, and more.`,
-  keywords: `profiles,${WEBSITE_NAME} team, technology, coding expertise`,
+  keywords: `Web3,${WEBSITE_NAME} articles, insights, News, Crypto,`,
 };
 
 

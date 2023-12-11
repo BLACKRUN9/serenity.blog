@@ -21,7 +21,7 @@ const ContentsTypeCard = () => {
                     </Link>
                 );
             })}
-            <a href={"https://github.com/SyedaMahamFahim"}
+            <a href={"https://t.me/serenitymosaic"}
             target="_blank"
             rel="noreferrer"
             >

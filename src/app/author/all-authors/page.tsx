@@ -26,7 +26,7 @@ const Authors = async () => {
           title
           className="mb-5 mt-10 dark:text-appRed-100 text-appPurple-100"
         >
-          Authors 🎨 
+          Authors 🎨
         </Text>
         <div className="flex flex-wrap justify-start items-center">
           {/* @ts-ignore */}

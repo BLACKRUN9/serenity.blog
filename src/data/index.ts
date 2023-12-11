@@ -1,7 +1,7 @@
 import footerLinks from './footerLinks'
 import allTypesContent from './allTypesContent'
 import tags from './tags'
-import openSource from "./openSource";
+import openSource from "./airdropList";
 import categories from "./categories";
 export {
   footerLinks,

@@ -1,7 +1,7 @@
 import { getRandomGradientColor } from "@/utils/utils";
 import Link from "next/link";
 import Image from "next/legacy/image";
-import ProfilePic from "./photo.jpg";
+import ProfilePic from "./photo.png";
 
 const MyInfoCard = () => {
     const styleCss =
@@ -16,12 +16,13 @@ const MyInfoCard = () => {
                         quality={100}
                         className='rounded-full'
                         src={ProfilePic}
-                        alt='Syeda Maham Fahim'
+                        alt='Serenity Mosaic'
                     />
                 </div>
                 <div className='ml-5'>
-                    <h4 className='font-bold'>Syeda Maham Fahim 🇵🇰</h4>
-                    <p className='line-clamp-1 text-xl'>💻 ✍ ℡ 🚀⚡️ </p>
+                    <h4 className='font-bold'>Seren Mosaic</h4>
+                    <p className='line-clamp-1 text-xl'>Crypto Seren Mosaic Is Indonesian </p>
+                    <p className='line-clamp-1 text-xl'>Crypto Community&Crypto News.</p>
                 </div>
                 
             </div>
@@ -31,19 +32,19 @@ const MyInfoCard = () => {
                         className={styleCss}
                         style={{ background: `${getRandomGradientColor()}` }}
                     >
-                        About
+                        About Seren Mosaic
                     </span>
                 </Link>
-                <Link href='/contact'>
+                <Link href='/connect'>
                     <span
                         className={styleCss}
                         style={{ background: `${getRandomGradientColor()}` }}
                     >
-                        Contact
+                        Connect With Seren
                     </span>
                 </Link>
                 <a
-                    href='https://www.linkedin.com/in/syedamahamfahim/'
+                    href='https://t.me/serenitymosaic'
                     target='_blank'
                     aria-label={`EXPERIENCE`}
                     rel='noopener noreferrer'
@@ -52,16 +53,16 @@ const MyInfoCard = () => {
                         className={styleCss}
                         style={{ background: `${getRandomGradientColor()}` }}
                     >
-                        Experience
+                        Telegram Channell
                     </span>
                 </a>
 
-                <Link href='/profiles'>
+                <Link href='/link'>
                     <span
                         className={styleCss}
                         style={{ background: `${getRandomGradientColor()}` }}
                     >
-                        Profiles
+                        Link
                     </span>
                 </Link>
             </div>

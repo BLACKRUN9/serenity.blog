@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState } from "react";
-import { OpenSourceCard} from "@/components/";
 import ReactPaginate from "react-paginate";
 import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai";
 

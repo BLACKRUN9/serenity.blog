@@ -52,7 +52,6 @@ const Snippets: React.FC<SnippetsProps> = ({
               ))
           : null}
       </div>
-
       <br />
 
       {!isArchive && snippets?.length > articlesPerPage  && (
