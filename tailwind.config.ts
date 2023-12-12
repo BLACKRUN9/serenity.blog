@@ -25,6 +25,7 @@ const tailwind = {
     },
     extend: {
 
+     
       colors: {
        appPurple:{
         100:'#FBDFAF'
@@ -32,7 +33,7 @@ const tailwind = {
        appRed:{
         100:'#F98000'
        },
-       bgSeren:{
+       appSeren:{
         100: '#00EBBB'
        },
        blogText:{

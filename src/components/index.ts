@@ -6,7 +6,7 @@ export const MyInfoCard =dynamic(()=>import('./MyInfoCard/MyInfoCard'))
 export const ContentsTypeCard=dynamic(()=>import('./ContentsTypeCard/ContentsTypeCard'))
 export const ArticleCard =dynamic(()=>import('./Article/ArticleCards/ArticleCard'));
 export const SnippetCard = dynamic(() => import('./SnippetCard/SnippetCard'))
-export const AirdropListCard =dynamic(()=>import('./OpenSourceCard/OpenSourceCard'));
+export const OpenSourceCard =dynamic(()=>import('./OpenSourceCard/OpenSourceCard'));
 export const CategoryCard =dynamic(()=>import('./CategoryCard/CategoryCard'));
 export const Seperator = dynamic(() => import('./Seperator/Seperator'))
 export const ArticleHeader =dynamic(()=>import('./Article/ArticleHeader/ArticleHeader'));

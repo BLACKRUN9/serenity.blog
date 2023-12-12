@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai";
-
+import { OpenSourceCard} from "@/components/";
 interface OpenSourceSectionProps {
     noOfOS: number;
     OS: any;

@@ -8,7 +8,7 @@ const MyInfoCard = () => {
         "flex items-center justify-center rounded-md from-blue-300 to-purple-300 px-4 pb-2 text-white hover:text-white shadow-lg hover:shadow-none transition-all mb-3 md:mx-5 mx-2 bg-gradient-to-r text-xl pt-2 cursor-pointer transform hover:scale-105 w-auto";
     return (
         <>
-            <div className='flex flex-wrap items-center justify-center p-10'>
+            <div className='flex flex-wrap items-center justify-center p-0'>
                 <div className='mr-5'>
                     <Image
                         height={100}
