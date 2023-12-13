@@ -44,13 +44,13 @@ const AuthorDetails = async ({ params }: { params: { slug: string } }) => {
           title
           className="mb-5 mt-10 dark:text-appRed-100 text-appPurple-100 center"
         >
-          Articles✨
+          Articles
         </Text>
         <div className={"flex flex-wrap flex-col"}>
         {author?.posts?.length > 0 ? (
                         <HomeArticles
-                        isArchive={false} noOfArticle={6} 
-                        articles={author?.posts} 
+                        isArchive={false} noOfNews={6} 
+                        news={author?.posts} 
                         isSeries={false}
                         isExternal={false}
                         />
