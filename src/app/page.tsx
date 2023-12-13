@@ -64,7 +64,7 @@ export default async function Home() {
                             <hr className='border-1 mx-auto mb-3 w-[98%]' />
                             {news?.length > 0 ? (
                                 <HomeArticles
-                                    noOfNews={3}
+                                    noOfNews={4}
                                     isArchive={true}
                                     news={news}
                                     isSeries={false}
