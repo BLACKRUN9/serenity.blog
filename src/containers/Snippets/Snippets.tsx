@@ -7,31 +7,31 @@ import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai";
 
 interface SnippetsProps {
   isArchive: boolean;
-  snippets: any;
+  airdrop: any;
   noOfSnippet: number;
 }
 
 const Snippets: React.FC<SnippetsProps> = ({
   isArchive,
-  snippets,
+  airdrop,
   noOfSnippet,
 }) => {
   const articlesPerPage = noOfSnippet || 9;
 
   // const [articles, setArticles] = useState([]);
 
-  const [currentItems, setCurrentItems] = useState(snippets || []);
+  const [currentItems, setCurrentItems] = useState(airdrop || []);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
     const endOffset = itemOffset + articlesPerPage;
-    setCurrentItems(snippets?.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(snippets?.length / articlesPerPage));
-  }, [itemOffset, articlesPerPage, snippets]);
+    setCurrentItems(airdrop?.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(airdrop?.length / articlesPerPage));
+  }, [itemOffset, articlesPerPage, airdrop]);
 
   const handlePageClick = (event: any) => {
-    const newOffset = (event.selected * articlesPerPage) % snippets?.length;
+    const newOffset = (event.selected * articlesPerPage) % airdrop?.length;
     setItemOffset(newOffset);
   };
 
@@ -47,14 +47,14 @@ const Snippets: React.FC<SnippetsProps> = ({
                 <SnippetCard
                   snippet={each}
                   key={i + each._id}
-                  path={`/snippets/${each.slug.current}`}
+                  path={`/airdrop/${each.slug.current}`}
                 />
               ))
           : null}
       </div>
       <br />
 
-      {!isArchive && snippets?.length > articlesPerPage  && (
+      {!isArchive && airdrop?.length > articlesPerPage  && (
         <div className="flex flex-col justify-center">
           <ReactPaginate
             breakLabel="..."
@@ -72,11 +72,11 @@ const Snippets: React.FC<SnippetsProps> = ({
       {isArchive && (
         <div className="w-full flex items-center">
           <Link
-            href={"/snippets"}
+            href={"/airdrop"}
             className="
-                                w-auto h-auto text-sm py-3 px-10 text-center dark:bg-slate-800 bg-appRed-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105"
+                                w-auto h-auto text-sm py-3 px-10 text-center dark:bg-slate-800 bg-appRed-100 rounded-full mx-auto text-appBackground-100 font-bold hover:!text-appBackground-100 dark:hover:!text-appRed-100 transition-all transform hover:scale-105"
           >
-            View All Snippets
+            View All Airdrop
           </Link>
         </div>
       )}

@@ -33,7 +33,7 @@ const Snippets = async () => {
             allSnippets?.length > 0 ? (
               <SnippetsContainer 
          isArchive={false}
-         snippets={allSnippets}
+         airdrop={allSnippets}
          noOfSnippet={9}
          />
             ) : <p>Airdrop Not Found</p>

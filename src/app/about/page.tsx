@@ -27,7 +27,7 @@ const About = async () => {
                         <>
                             <Text
                                 title
-                                className='text-appPurple-100 dark:text-appRed-100'
+                                className='text-black-100 dark:text-appRed-100'
                             >
                                 {getFirstAbout?.title}
                             </Text>

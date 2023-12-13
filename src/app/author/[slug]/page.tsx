@@ -42,7 +42,7 @@ const AuthorDetails = async ({ params }: { params: { slug: string } }) => {
 
         <Text
           title
-          className="mb-5 mt-10 dark:text-appRed-100 text-appPurple-100 center"
+          className="mb-5 mt-10 dark:text-appRed-100 text-appBackground-100 center"
         >
           Articles
         </Text>

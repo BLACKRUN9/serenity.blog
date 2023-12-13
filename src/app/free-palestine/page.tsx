@@ -19,7 +19,7 @@ const FreePalestine = async () => {
                 <div className='container px-0 pb-[20px] pt-[10px] md:px-[15px]'>
                     <Text
                         title
-                        className='text-appPurple-100 dark:text-appRed-100'
+                        className='text-appBackground-100 dark:text-appRed-100'
                     >
                         Free Palestine
                     </Text>

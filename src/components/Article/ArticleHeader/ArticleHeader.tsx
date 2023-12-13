@@ -75,7 +75,7 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
                             <span>SERIES ---{">"}</span>
                             <Link
                                 href={series?.slug?.current}
-                                className='text-appPurple-100 dark:text-appRed-100'
+                                className='text-appSeren-100 dark:text-appRed-100'
                             >
                                 {series?.title}
                             </Link>
@@ -86,7 +86,7 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
                 <div className='text-[14px] m-1 md:text-lg'>
                     <p>
                         <span>Last Updated ---{">"}</span>
-                        <span className='text-appPurple-100 dark:text-appRed-100'>
+                        <span className='text-appSeren-100 dark:text-appRed-100'>
                             {format(new Date(_updatedAt), "MMMM d, yyyy")}
                         </span>
                     </p>

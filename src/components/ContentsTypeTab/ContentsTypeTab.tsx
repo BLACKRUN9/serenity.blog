@@ -14,7 +14,7 @@ const ContentsTypeTab = () => {
             const isActive = pathname === content.url;
 
             const linkClass = isActive
-              ? "border-2 border-black dark:border-white px-10 py-2 text-appPurple-100 dark:text-appRed-100"
+              ? "border-2 border-black dark:border-white px-10 py-2 text-appSeren-100 hover:text-appBackground-100 dark:text-appRed-100"
               : "";
 
             return (

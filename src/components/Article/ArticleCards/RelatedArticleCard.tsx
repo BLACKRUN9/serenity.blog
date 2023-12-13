@@ -63,7 +63,7 @@ const RelatedArticleCard = ({ news, path,isExternal }: IProp) => {
                                 <>
                                     {" "}
                                     |{" "}
-                                    <span className='text-transfrom-capitalize pl-1'>
+                                    <span className='text-transfrom-capitalize pl-1 text-appRed-100 dark:text-appRed-100'>
                                         {" "}
                                         {estimatedReadingTime
                                             ? estimatedReadingTime
@@ -93,7 +93,7 @@ const RelatedArticleCard = ({ news, path,isExternal }: IProp) => {
                             <Link href={path}>
                                 <h1
                                     className={
-                                        "cursor-pointer text-[16px] font-bold tracking-wide transition-colors duration-300 hover:text-appPurple-100 md:text-[22px]"
+                                        "cursor-pointer text-[16px] font-bold tracking-wide transition-colors duration-300 hover:text-appBackground-100 md:text-[22px]"
                                     }
                                 >
                                     {title}

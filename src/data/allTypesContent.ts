@@ -9,8 +9,8 @@ const allTypesContent: ContentType[] = [
     url: "/news",
   },
   {
-    name: "Snippets",
-    url: "/snippets",
+    name: "Airdrop",
+    url: "/airdrop",
   },
   {
     name: "Tags",

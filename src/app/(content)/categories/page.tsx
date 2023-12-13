@@ -23,7 +23,7 @@ const Categories = async () => {
 
                 <Text
                     title
-                    className='mb-5 mt-10 text-appPurple-100 dark:text-appRed-100'
+                    className='mb-5 mt-10 text-black-100 dark:text-appRed-100 hover:text-appPurple-100'
                 >
                     Categories 🐈
                 </Text>

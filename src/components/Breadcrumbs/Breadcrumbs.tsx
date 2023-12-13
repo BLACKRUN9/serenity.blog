@@ -14,7 +14,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ pageName, pageSlug,pageLink }
           <li>
             <Link
               href="/"
-              className="text-gray-500 dark:text-gray-200 hover:text-gray-700"
+              className="text-appBackground-100 dark:text-appRed-100 hover:text-appBackground-100"
             >
               Home /
             </Link>

@@ -24,7 +24,7 @@ const News = async () => {
 
         <Text
           title
-          className="mb-5 mt-10 text-appPurple-100 dark:text-appRed-100"
+          className="mb-5 mt-10 text-appBackground-100 dark:text-appRed-100"
         >
           NEWS 🪐
         </Text>

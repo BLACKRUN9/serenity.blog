@@ -24,7 +24,7 @@ const Authors = async () => {
 
         <Text
           title
-          className="mb-5 mt-10 dark:text-appRed-100 text-appPurple-100"
+          className="mb-5 mt-10 dark:text-appRed-100 text-appBackground-100"
         >
           Authors
         </Text>

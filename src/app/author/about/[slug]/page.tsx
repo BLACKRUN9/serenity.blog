@@ -45,7 +45,7 @@ const AuthorAbout = async ({ params }: { params: { slug: string } }) => {
          
           <Text
             title
-            className="dark:text-appRed-100 text-appPurple-100"
+            className="dark:text-appRed-100 text-appBackground-100"
           >
             About: {authorAbout?.name}
             
