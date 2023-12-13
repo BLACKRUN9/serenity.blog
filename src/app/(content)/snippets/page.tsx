@@ -18,15 +18,15 @@ const Snippets = async () => {
     });
 
   return (
-    <section className="container px-3 md:pb-20 md:pt-10 pt-20">
+    <section className="container px-3 md:pb-20 md:pt-10 pt-20  dark:text-appRed-100 text-appBackgroud-100">
       <div className="mt-19">
         <ContentsTypeTab />
 
         <Text
           title
-          className="mb-8 mt-10 dark:text-appRed-100 text-appBackgroud-100"
+          className="mb-8 mt-10 dark:text-appSeren-100 text-appBackgroud-100"
         >
-          New Airdrop 🚀 
+          New Airdrop 
         </Text>
         <div className="flex flex-wrap">
           {

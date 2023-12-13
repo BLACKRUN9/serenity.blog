@@ -24,7 +24,7 @@ const Snippets = async () => {
 
         <Text
           title
-          className="mb-8 mt-10 dark:text-black-100 text-appBackground-100"
+          className="mb-8 mt-10 dark:text-appRed-100 text-appBackground-100"
         >
           Airdrop 🚀 
         </Text>
