@@ -26,7 +26,7 @@ const Snippets = async () => {
           title
           className="mb-8 mt-10 dark:text-appRed-100 text-appBackgroud-100"
         >
-          Press Release 🚀 
+          New Airdrop 🚀 
         </Text>
         <div className="flex flex-wrap">
           {
