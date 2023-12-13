@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 
 const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
-  const articles = await sanityFetch<SanityDocument>({
+  const news = await sanityFetch<SanityDocument>({
     query: getSeriesRelatedPostQuery,
     params,
   });
@@ -42,7 +42,7 @@ const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
         <Breadcrumbs pageName="Series" pageSlug={title} pageLink="/series" />
         
         {
-          !articles ? (
+          !news ? (
             <p>No Article Found</p>
           ) : (<>  <Text
             title
@@ -54,9 +54,9 @@ const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
           </Text>
           <div className={"flex flex-wrap flex-col"}>
             
-             {articles ? (
+             {news ? (
                           <HomeArticles
-                          isArchive={false} noOfArticle={9} articles={articles}
+                          isArchive={false} noOfNews={9} articles={articles}
                           isSeries={false} isExternal={false}
                           />
                       ) : (
