@@ -85,7 +85,7 @@ export default async function Home() {
                         {allSnippets?.length > 0 ? (
                             <SnippetsContainer
                                 isArchive={true}
-                                snippets={allSnippets}
+                                airdrop={allSnippets}
                                 noOfSnippet={3}
                             />
                         ) : (
