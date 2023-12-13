@@ -56,7 +56,7 @@ const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
             
              {news ? (
                           <HomeArticles
-                          isArchive={false} noOfNews={9} articles={articles}
+                          isArchive={false} noOfNews={9} news={news}
                           isSeries={false} isExternal={false}
                           />
                       ) : (
