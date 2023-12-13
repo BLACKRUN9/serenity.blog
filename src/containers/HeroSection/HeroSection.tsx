@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <>
      
-     <section className="w-full md:pt-[100px] md:pb-[70px] pt-[90px] pb-20 mb-10 dark:bg-appRed-100 bg-slate-200">
+     <section className="w-full md:pt-[100px] md:pb-[70px] pt-[90px] pb-20 mb-10 dark:bg-appBackground-100 bg-slate-200">
      
           <div className="container px-3">
          <div  className="flex flex-wrap items-start md:flex-nowrap justify-center">          

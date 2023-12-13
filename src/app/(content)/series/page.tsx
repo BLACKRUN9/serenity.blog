@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const Series = async () => {
-    const articles = await sanityFetch<SanityDocument>({
+    const news = await sanityFetch<SanityDocument>({
         query: getSeriesQuery,
     });
     return (
@@ -29,11 +29,11 @@ const Series = async () => {
                 </Text>
                 <div className={"flex flex-col flex-wrap"}>
                 {
-            articles?.length > 0 ? (
+            news?.length > 0 ? (
                 <HomeArticles
                 isArchive={false}
-                noOfArticle={6}
-                articles={articles}
+                noOfNews={6}
+                news={news}
                 isSeries={true}
                 isExternal={false}
             />

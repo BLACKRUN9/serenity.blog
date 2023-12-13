@@ -34,11 +34,15 @@ const tailwind = {
         100:'#F98000'
        },
        appSeren:{
-        100: '#00EBBB'
+        100: '#000000'
+       },
+       appBackground:{
+        100: '#050624'
        },
        blogText:{
         100:"rgb(222 226 227)"
        }
+
       },
       right:{
         12:"12rem"

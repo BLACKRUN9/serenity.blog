@@ -48,8 +48,7 @@ const Blog = ({ post, relatedPosts, isSnippet,isSeries }: any) => {
             </article>
             <Seperator />
             <p className="my-8 text-lg text-center">
-              Hope this helps, Save and Share <br /> If you have any doubts ask in
-              the comments below 👇.
+              Share this is News <br /> Comment ⬇️ .
             </p>
             <Seperator />
             

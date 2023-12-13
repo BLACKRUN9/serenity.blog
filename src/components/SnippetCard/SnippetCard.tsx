@@ -28,7 +28,7 @@ const SnippetCard = ({ snippet, path }: SnippetCardProps) => {
       <div
         className={combineClasses(
           classes.article_card,
-          "border-b-[5px] border-appRed-100 dark:bg-slate-800 dark:text-white dark:drop-shadow-lg flex flex-col justify-between pb-5"
+          "border-b-[5px] border-appRed-100 dark:bg-appSeren-100 dark:text-white dark:drop-shadow-lg flex flex-col justify-between pb-5"
         )}
       >
         <div>

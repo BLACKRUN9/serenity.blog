@@ -34,12 +34,12 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
   console.log()
   return (
     <div
-      className={"w-full lg:w-1/3 md:w-1/2 md:px-[15px] px-2 mb-[30px] h-fit"}
+      className={"w-full lg:w-1/3 md:w-1/2 md:px-[15px] px-2 mb-[30px]"}
     >
       <div
         className={combineClasses(
           classes.article_card,
-          "border-b-[5px] border-appRed-100 dark:bg-slate-800 dark:text-white dark:drop-shadow-lg flex flex-col justify-between pb-5"
+          "border-b-[5px] border-appRed-100 dark:bg-appSeren-100 dark:text-appPurple-100 dark:drop-shadow-lg flex flex-col justify-between pb-5"
         )}
       >
         <div>
@@ -55,7 +55,7 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
             />
           </div>
 
-          <div className={"d-block px-[15px] py-0"}>
+          <div className={"d-block px-[25px] space-y-4 pb-0"}>
             <p
               className={"font-bold text-xs pt-3 mb-0 md:mb-3 text-appRed-100"}
             >
@@ -81,7 +81,7 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
               >
                 <h1
                   className={
-                    "text-[16px] font-bold cursor-pointer tracking-wide hover:text-appPurple-100 transition-colors duration-300 md:text-[22px]"
+                    "text-[16px] font-bold cursor-pointer tracking-wide hover:text-appRed-100 transition-colors duration-300 md:text-[22px]"
                   }
                 >
                   {title}
@@ -91,7 +91,7 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
               <Link href={path}>
                 <h1
                   className={
-                    "text-[16px] font-bold cursor-pointer tracking-wide hover:text-appPurple-100 transition-colors duration-300 md:text-[22px]"
+                    "text-[16px] font-bold cursor-pointer tracking-wide hover:text-appRed-100 transition-colors duration-300 md:text-[22px]"
                   }
                 >
                   {title}

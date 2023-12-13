@@ -32,7 +32,7 @@ const ArticleAuthorCard = ({ author}: { author: IAuthor}) => {
                   href={`/author/${author?.slug?.current}`}
                   className="w-auto h-auto text-sm py-3 px-4 text-center dark:bg-appPurple-100 bg-appRed-100 rounded-full mx-auto text-white font-bold hover:!text-white dark:hover:!text-slate-400 transition-all transform hover:scale-105 md:px-10"
                 >
-                  View All My Articles
+                  View All News
                   
                 </Link>
               </div>

@@ -16,7 +16,7 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
             <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                 <div className={"flex flex-wrap"}>
                     <h1 className='mb-5 w-full px-3 text-xl font-bold text-appPurple-100 dark:text-appRed-100 md:text-3xl'>
-                        READ MORE {isSnippet ? "SNIPPETS" : "ARTICLES"}
+                        READ MORE {isSnippet ? "SNIPPETS" : "NEWS"}
                     </h1>
                     <hr className='border-1 mx-auto mb-5 w-[98%]' />
                     {!isSnippet && relatedPosts?.length
@@ -24,12 +24,12 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                               .slice(0, 2)
                               .map((each: any, i: number) => (
                                   <RelatedArticleCard
-                                      article={each}
+                                      news={each}
                                       key={i + each._id}
                                       isExternal={false}
                                       previousPost={false}
                                       isSeries={false}
-                                      path={`/articles/${each.slug.current}`}
+                                      path={`/news/${each.slug.current}`}
                                   />
                               ))
                         : null}
@@ -78,9 +78,9 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                         !isSnippet &&
                         relatedPosts.length === 0 && (
                             <p className={"mb-0 px-3 md:mb-3"}>
-                                Currently, there are no articles available in
+                                Currently, there is no news available in
                                 this series. Stay tuned for upcoming updates and
-                                exciting content!
+                               interesting crypto news !
                             </p>
                         ))}
 

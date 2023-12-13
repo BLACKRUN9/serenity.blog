@@ -34,7 +34,7 @@ const ArticelFooter = ({ isSeries,relatedPosts,authorInfo,isSnippet }: any) => {
       {deviceSize !== "desktop" ? (
         <div className={wrapperClasses}>
           <p className="border-b border-gray-300 pb-2 mb-3 font-medium w-full">
-            Share this article
+            Share this News
           </p>
 
           <SocialShare />

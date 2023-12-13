@@ -48,7 +48,7 @@ const footerLinks = {
       },
       {
         name:"GitHub",
-        url:"https://github.com/SyedaMahamFahim",
+        url:"https://github.com/Dwanx-9",
         icons:<AiFillGithub/>
       },
       {
@@ -58,7 +58,7 @@ const footerLinks = {
       },
       {
         name:"Medium",
-        url:"https://medium.com/@syedamahamfahim/",
+        url:"https://medium.com/@serenitymosaic",
         icons:<AiFillMediumSquare/>
       },
     ]

@@ -13,7 +13,7 @@ const SocialShare = () => {
   const url =
     typeof window !== "undefined" ? window.location.href : WEBSITE_URL;
 
-  const twitterShare = `http://twitter.com/share?text=Check out this article!! &url=${url}&hashtags=webdevelopment,javacript,javascriptdaily,webdevelopmenttutorial,tutorial`;
+  const twitterShare = `http://twitter.com/share?text=Check out this article!! &url=${url}&hashtags=news,newscrypto,insightcrypto,insights,bitcoin,crypto`;
   const facebookShare = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
   const linkedinShare = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=Check out this article!!&source=LinkedIn`;
 

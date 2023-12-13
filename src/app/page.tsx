@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 
 
 export default async function Home() {
-    const articles = await sanityFetch<SanityDocument>({
+    const news = await sanityFetch<SanityDocument>({
         query: postsQuery,
     });
     const allSnippets = await sanityFetch<SanityDocument>({
@@ -48,7 +48,7 @@ export default async function Home() {
         <>
             <div
                 className={
-                    "font-regular bg-slate-100 pb-[20px] text-lg leading-relaxed text-black dark:bg-slate-900 dark:text-white md:min-h-screen"
+                    "font-regular bg-appBackground-100 pb-[20px] text-lg leading-relaxed text-black dark:bg-appBackground-100 dark:text-appSeren-600 md:min-h-screen"
                 }
                 key={Math.random()}
             >
@@ -57,16 +57,16 @@ export default async function Home() {
                     <div className='container mx-auto mb-20 px-0 lg:px-[15px]'>
                         <div className={"flex flex-wrap"}>
                         
-                            <h1 className='mb-5 w-full px-3 text-xl font-bold md:text-3xl'>
-                                READ LATEST ARTICLES
+                            <h1 className='mb-5 w-full text-appPurple-100 px-3 text-xl font-bold md:text-3xl'>
+                                READ LATEST NEWS
                             </h1>
 
-                            <hr className='border-1 mx-auto mb-5 w-[98%]' />
-                            {articles?.length > 0 ? (
+                            <hr className='border-1 mx-auto mb-3 w-[98%]' />
+                            {news?.length > 0 ? (
                                 <HomeArticles
-                                    noOfArticle={3}
+                                    noOfNews={3}
                                     isArchive={true}
-                                    articles={articles}
+                                    news={news}
                                     isSeries={false}
                                     isExternal={false}
                                 />
@@ -78,7 +78,7 @@ export default async function Home() {
                 </Suspense>
                 <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                     <div className={"flex flex-wrap"}>
-                        <h1 className='mb-5 w-full px-3 text-xl font-bold md:text-3xl'>
+                        <h1 className='mb-5 w-full text-appPurple-100 px-3 text-xl font-bold md:text-3xl'>
                             PRESS RELEASE
                         </h1>
                         <hr className='border-1 mx-auto mb-5 w-[98%]' />

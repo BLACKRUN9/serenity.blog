@@ -9,14 +9,14 @@ import { format } from "date-fns";
 import readingTime from "reading-time";
 
 interface IProp {
-    article: IArticleHeaderData;
+    news: IArticleHeaderData;
     path: string;
     isExternal: boolean;
     previousPost?:boolean;
     isSeries:boolean
 }
 
-const RelatedArticleCard = ({ article, path,isExternal }: IProp) => {
+const RelatedArticleCard = ({ news, path,isExternal }: IProp) => {
     // set url and path
     
     const {
@@ -32,7 +32,7 @@ const RelatedArticleCard = ({ article, path,isExternal }: IProp) => {
             alt,
             asset: { _ref },
         },
-    } = article;
+    } = news;
     const readTime = readingTime(body ? body : []);
 
     return (
