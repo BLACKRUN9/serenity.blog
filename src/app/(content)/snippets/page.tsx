@@ -24,7 +24,7 @@ const Snippets = async () => {
 
         <Text
           title
-          className="mb-8 mt-10 dark:text-appRed-100 text-appPurple-100"
+          className="mb-8 mt-10 dark:text-appRed-100 text-appBackgroud-100"
         >
           Press Release 🚀 
         </Text>
