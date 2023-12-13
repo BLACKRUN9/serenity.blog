@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         siteName: WEBSITE_NAME,
         images: [
           {
-            url: '',
+            url: './blog-banner.png',
             width: 1400,
             height: 700,
           },

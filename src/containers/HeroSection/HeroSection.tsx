@@ -11,16 +11,14 @@ const HeroSection = () => {
      
           <div className="container px-3">
          <div  className="flex flex-wrap items-start md:flex-nowrap justify-center">          
-</div>
-
+         </div>
             <div className="flex flex-wrap md:flex-nowrap justify-center items-center">
-            
               <div className="flex flex-col md:items-center justify-between h-full shadow-sm bg-white  dark:bg-slate-900 dark:text-white text-black rounded-lg">
                 <MyInfoCard />
               </div>
 
-              <div className="flex flex-col md:flex-row md:items-center mt-5 md:mt-0">
-                <div className="flex justify-center mt-5 flex-wrap ">
+              <div className="flex grid gap-12 md:flex-nowrap md:items-center mt-5 md:mt-0">
+                <div className="flex flex-wrap grid-cols-5 divide-x gap-6 justify-center mt-8  ">
                   <ContentsTypeCard />
                 </div>
               </div>
