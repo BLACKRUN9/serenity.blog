@@ -9,21 +9,26 @@ const allTypesContent: ContentType[] = [
     url: "/news",
   },
   {
-    name: "Airdrop",
-    url: "/airdrop",
+    name: "Press Release",
+    url: "/press-release",
   },
   {
-    name: "Tags",
-    url: "/tags",
+    name: "Airdrop",
+    url: "/airdrop",
   },
   {
     name: "Categories",
     url: "/categories",
   },
   {
-    name: "Series",
-    url: "/series",
+    name: "Tags",
+    url: "/tags",
   },
+  {
+    name: "Tutorial",
+    url: "/tutorial",
+  },
+  
   
 ];
 

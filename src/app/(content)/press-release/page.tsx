@@ -7,9 +7,9 @@ import { getSeriesQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 
 export const metadata: Metadata = {
-    title: "Series",
-    description: `Dive into tech series by ${WEBSITE_NAME}. Follow our in-depth explorations of coding, data engineering, and more.`,
-    keywords: "tech series, coding, data engineering, in-depth exploration",
+    title: "PressRelease",
+    description: `Dive into Press Release by ${WEBSITE_NAME}. Follow our in-depth explorations of coding, data engineering, and more.`,
+    keywords: "press release, Press Release",
 };
 
 const Series = async () => {
@@ -25,7 +25,7 @@ const Series = async () => {
                     title
                     className='mb-5 mt-10 text-black-100 dark:text-appRed-100'
                 >
-                    Series 🎢
+                    Press Release 🎢
                 </Text>
                 <div className={"flex flex-col flex-wrap"}>
                 {
@@ -35,9 +35,9 @@ const Series = async () => {
                 noOfNews={6}
                 news={news}
                 isSeries={true}
-                isExternal={false}
+                isGiveaways={false}
             />
-            ) : <p>No Series Found</p>
+            ) : <p>No Press Release Found</p>
           }
                     
                 </div>

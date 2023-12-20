@@ -13,7 +13,7 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
 }) => {
     return (
         <>
-            <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
+            <div className='container mx-auto mt-20 dark:bg-appSmoky-100 px-0 lg:px-[15px]'>
                 <div className={"flex flex-wrap"}>
                     <h1 className='mb-5 w-full px-3 text-xl font-bold text-appSeren-100 dark:text-appRed-100 md:text-3xl'>
                         READ MORE {isSnippet ? "SNIPPETS" : "NEWS"}
@@ -69,7 +69,7 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                            
                             <p
                             className={
-                                "mb-0 px-3 md:mb-3"
+                                "mb-0 text-black dark:text-grey-300 px-3 md:mb-3"
                             }
                         >
                             Currently, there are no news available in this series. Stay tuned for upcoming updates and exciting content!

@@ -6,9 +6,9 @@ import { SanityDocument } from "@sanity/client";
 import { snippetsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 export const metadata: Metadata = {
-  title:'airdrop',
-  description: `Explore Airdrop by ${WEBSITE_NAME}. Discover quick tips, code examples, and insights for your coding journey.`,
-  keywords: 'Airdrop, crypto, news, insights',
+  title:'tutorial',
+  description: `Explore tutorial by ${WEBSITE_NAME}. Discover quick tips, code examples, and insights for your coding journey.`,
+  keywords: 'tutorial, crypto, news, insights',
 };
 
 
@@ -26,7 +26,7 @@ const Snippets = async () => {
           title
           className="mb-8 mt-10 dark:text-appRed-100 text-appBackground-100"
         >
-          Airdrop 🚀 
+          Tutorial
         </Text>
         <div className="flex flex-wrap">
           {
@@ -36,7 +36,7 @@ const Snippets = async () => {
          airdrop={allSnippets}
          noOfSnippet={9}
          />
-            ) : <p>Airdrop Not Found</p>
+            ) : <p>Tutorial Not Found</p>
           }
          
         </div>

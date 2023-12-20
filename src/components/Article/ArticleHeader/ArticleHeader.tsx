@@ -21,19 +21,19 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
     } = ARTICLE_DETAILS;
 
     return (
-        <div className='mb-[30px] font-bold'>
+        <div className='mb-[50px] font-bold'>
             <h1
                 className={combineClasses(
                     classes.articleTitle,
-                    "mb-[5px] mt-[20px] text-center text-2xl font-bold md:text-4xl"
+                    "mb-[10px]  mt-[20px] text-center text-2xl font-bold md:text-4xl"
                 )}
             >
                 {title}
             </h1>
 
-            <div className='flex flex-wrap items-center justify-center text-base font-medium mt-8'>
+            <div className='flex  flex-wrap items-center justify-center text-base font-medium mt-8'>
                 <div className='m-5 flex flex-wrap items-center justify-evenly'>
-                    <div>
+                    <div className="">
                        
                         <Image
                             src={`${urlFor(author?.image?.asset?._ref)}`}
@@ -54,6 +54,7 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
             </div>
             {!isSnippet && (
                 <ArticleImage
+                    className="border-appRed-100 gap-2 mb-6 hover:dark:border-appCyan-100 dark:border-appRed-100/50 hover:shadow-sm hover:shadow-appCyan-100/100 shadow-sm shadow-appRed-100/100"
                     src={`${urlFor(mainImage?.asset?._ref)}`}
                     alt={mainImage?.alt}
                     imageWidth={mainImageWidth}
@@ -66,11 +67,11 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
 
             <div
                 className={combineClasses(
-                    "flex flex-col flex-wrap justify-center text-center"
+                    "flex  flex-col flex-wrap justify-center text-center"
                 )}
             >
                 {!isSnippet && series !== null && (
-                    <div className='text-[14px] m-1 md:text-lg'>
+                    <div className='text-[14px] m-1 mb-2 md:text-lg'>
                         <p>
                             <span>SERIES ---{">"}</span>
                             <Link
@@ -83,7 +84,7 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
                     </div>
                 )}
 
-                <div className='text-[14px] m-1 md:text-lg'>
+                <div className='text-[14px] mb-2 m-1 md:text-lg'>
                     <p>
                         <span>Last Updated ---{">"}</span>
                         <span className='text-appSeren-100 dark:text-appRed-100'>

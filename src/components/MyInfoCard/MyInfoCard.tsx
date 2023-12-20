@@ -35,7 +35,7 @@ const MyInfoCard = () => {
                     About Seren Mosaic
                   </span>
                 </Link>
-                <Link href="/connect">
+                <Link href="/contact">
                   <span
                     className="flex items-center justify-center rounded-md px-4 pb-2 text-white dark:text-black hover:text-black shadow-lg hover:shadow-none transition-all mb-3 md:mx-5 mx-2 text-xl pt-2 cursor-pointer transform hover:scale-105 w-auto"
                     style={{ background: colorPalette[1] }}
@@ -56,12 +56,12 @@ const MyInfoCard = () => {
                     Telegram Channel
                   </span>
                 </a>
-                <Link href="/link">
+                <Link href="/profiles">
                   <span
                     className="flex items-center justify-center rounded-md px-4 pb-2 text-white hover:text-whitetext-white dark:text-black hover:text-black shadow-lg hover:shadow-none transition-all mb-3 md:mx-5 mx-2 text-xl pt-2 cursor-pointer transform hover:scale-105 w-auto"
                     style={{ background: colorPalette[3] }}
                   >
-                    Link
+                    Social Media
                   </span>
                 </Link>
               </div>

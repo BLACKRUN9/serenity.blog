@@ -24,7 +24,7 @@ const ContentsTypeTab = () => {
             );
           })}
           <li className={`px-4 pb-2 hover:text-appRed-100 shadow-lg hover:shadow-none transition-all mb-3 md:mx-5 mx-2 transform hover:scale-105 w-auto text-2xl font-bold cursor-pointer`} >
-                <a href={"/"}
+                <a href={"/airdrop-list"}
             target="_blank"
             rel="noreferrer">Airdrop List</a>
               </li>

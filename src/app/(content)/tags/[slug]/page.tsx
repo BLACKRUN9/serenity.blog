@@ -60,7 +60,7 @@ const TagDetail = async ({ params }: { params: { slug: string } }) => {
                             isExternal={false}
                         />
                     ) : (
-                        <h1>No Articles Found </h1>
+                        <h1>No Content Found </h1>
                     )}
                 </div>
             </div>

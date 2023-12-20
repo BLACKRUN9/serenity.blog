@@ -1,6 +1,7 @@
 import { WEBSITE_URL } from "@/constants/_APP_SETUP";
 import {
     postsQuery,
+    airdropsQuery,
     getAuthorsQuery,
     getSeriesQuery,
     getLegalsQuery,
@@ -15,10 +16,16 @@ export default async function sitemap() {
     const baseUrl = WEBSITE_URL;
 
     const posts = await createClient(clientConfig).fetch(postsQuery);
+    const airdrops = await createClient(clientConfig).fetch(airdropsQuery);
 
     const postUrls = posts?.map((post) => ({
         url: `${baseUrl}/post/${post?.slug?.current}`,
         lastModified: post?.updatedAt,
+    }));
+
+    const airdropUrls = posts?.map((airdrop) => ({
+        url: `${baseUrl}/airdrop/${airdrop?.slug?.current}`,
+        lastModified: airdrop?.updatedAt,
     }));
 
     const authors = await createClient(clientConfig).fetch(getAuthorsQuery)
@@ -55,11 +62,14 @@ export default async function sitemap() {
         { url: `${baseUrl}/external-articles`, lastModified: new Date() },
         { url: `${baseUrl}/open-source`, lastModified: new Date() },
         { url: `${baseUrl}/tags`, lastModified: new Date() },
-        { url: `${baseUrl}/articles`, lastModified: new Date() },
+        { url: `${baseUrl}/news`, lastModified: new Date() },
+        { url: `${baseUrl}/airdrop`, lastModified: new Date() },
+
         { url: `${baseUrl}/snippets`, lastModified: new Date() },
         { url: `${baseUrl}/categories`, lastModified: new Date() },
         { url: `${baseUrl}/series`, lastModified: new Date() },
         ...postUrls,
+        ...airdropUrls,
         ...authorsUrls,
         ...seriesUrls,
         ...snippetsUrls,

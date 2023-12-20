@@ -39,11 +39,11 @@ const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
   return (
     <section className="container px-3 md:pb-20 md:pt-10 pt-20">
       <div className="mt-19">
-        <Breadcrumbs pageName="Series" pageSlug={title} pageLink="/series" />
+        <Breadcrumbs pageName="pressRelease" pageSlug={title} pageLink="/press-release" />
         
         {
           !news ? (
-            <p>No Article Found</p>
+            <p>No Press Release Found</p>
           ) : (<>  <Text
             title
             className="mb-8 mt-10 dark:text-appRed-100 text-appPurple-100 
@@ -57,10 +57,10 @@ const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
              {news ? (
                           <HomeArticles
                           isArchive={false} noOfNews={9} news={news}
-                          isSeries={false} isExternal={false}
+                          isSeries={true} isGiveaways={false}
                           />
                       ) : (
-                          <p>No Article Found</p>
+                          <p>No Press Release Found</p>
                       )}
           </div></>)
         }

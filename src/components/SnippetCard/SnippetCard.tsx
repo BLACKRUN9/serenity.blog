@@ -28,13 +28,13 @@ const SnippetCard = ({ snippet, path }: SnippetCardProps) => {
       <div
         className={combineClasses(
           classes.article_card,
-          "border-b-[5px] border-appRed-100 dark:bg-appSeren-100 dark:text-white text-appBackground-100 dark:drop-shadow-lg flex flex-col justify-between pb-5"
+          "border-b-[5px] border-appRed-100 border-appRed-100 hover:dark:border-appRed-100 dark:border-appCyan-100 hover:shadow-lg hover:shadow-appRed-100/80 shadow-lg shadow-appCyan-100/80 dark:bg-transparent dark:drop-shadow-lg dark:bg-appSeren-100 dark:text-white text-appBackground-100 dark:drop-shadow-lg flex flex-col justify-between pb-5"
         )}
       >
         <div>
           <div className={"d-block px-[15px] py-0"}>
             <p
-              className={"font-bold text-xs pt-3 mb-0 md:mb-3 text-appRed-100 dark:text-appRed-100"}
+              className={"font-bold text-xs pt-3 mb-0 md:mb-3 text-appRed-100 hover:dark:text-appRed-100 dark:text-appCyan-100"}
             >
               <span className="pr-1">
                 {" "}

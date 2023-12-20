@@ -64,6 +64,23 @@ export const removeBodyNoScroll = (): void => {
  * Generates a random linear gradient color using HSL color model.
  * @return {string} The generated linear gradient color in string format.
  */
+export const getRandomGradientColor = (): string => {
+  const hue1 = Math.floor(Math.random() * 360);
+  const hue2 = (hue1 + Math.floor(Math.random() * 180)) % 360;
+  const saturation = 75 + Math.floor(Math.random() * 25);
+  const lightness1 = 50 + Math.floor(Math.random() * 25);
+  const lightness2 = 50 + Math.floor(Math.random() * 25);
+  return `linear-gradient(${hue1}deg, hsl(${hue1}, ${saturation}%, ${lightness1}%), hsl(${hue2}, ${saturation}%, ${lightness2}%))`;
+};
+
+export const getRandomHexColor = () => {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
 
 export const getSpecificColorPalette = (): string[] => {
   const colorPalette = ['#09b7c5', '#fc0a7c', '#ff7300', '#fdc99c', '#0063ff'];
@@ -85,26 +102,26 @@ console.log(color1, color2, color3, color4, color5);
 
 
 
-// export const getRandomColorPalette = (): string[] => {
-//   const colorPalette = [];
+export const getRandomColorPalette = (): string[] => {
+  const colorPalette = [];
 
-//   for (let i = 0; i < 4; i++) {
-//     const letters = "0123456789ABCDEF";
-//     let color = "#";
-//     for (let j = 0; j < 6; j++) {
-//       color += letters[Math.floor(Math.random() * 16)];
-//     }
-//     colorPalette.push(color);
-//   }
+  for (let i = 0; i < 4; i++) {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let j = 0; j < 6; j++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    colorPalette.push(color);
+  }
 
-//   return colorPalette;
-// };
+  return colorPalette;
+};
 
 
-// const colorPalette = getRandomColorPalette();
-// const color1 = colorPalette[0];
-// const color2 = colorPalette[1];
-// const color3 = colorPalette[2];
-// const color4 = colorPalette[3];
+const colorPalette = getRandomColorPalette();
+const random1 = colorPalette[0];
+const random2 = colorPalette[1];
+const random3 = colorPalette[2];
+const random4 = colorPalette[3];
 
-// console.log(color1, color2, color3, color4);
+console.log(random1, random2, random3, random4);

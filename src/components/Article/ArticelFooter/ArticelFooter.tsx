@@ -8,7 +8,7 @@ const ArticelFooter = ({ isSeries,relatedPosts,authorInfo,isSnippet }: any) => {
   const deviceSize:any = useDeviceSize();
 
   const wrapperClasses =
-    "bg-white dark:bg-slate-800 dark:border-none border-slate-100 shadow-lg border md:rounded-[8px] px-[15px] py-[10px] mb-[30px] overflow-hidden";
+    "bg-white dark:bg-black dark:border-none border-slate-100 shadow-lg border md:rounded-[8px] px-[15px] py-[10px] mb-[30px] overflow-hidden";
   return (
     <>
      <div className="px-4">

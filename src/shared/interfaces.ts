@@ -34,6 +34,20 @@ export interface IArticleHeaderData {
   estimatedReadingTime:number
   
 }
+export interface IForumHeaderData {
+  author: IAuthor;
+  _createdAt : Date;
+  publishedAt:Date;
+  title: string;
+  tags: string[];
+  thumbnail: string;
+  meta_description: string;
+  category?: string;
+  mainImage: any;
+  body:any;
+  estimatedReadingTime:number
+  
+}
 
 export interface ISnippetHeaderData {
   date: string;
@@ -63,6 +77,13 @@ export interface iArticle {
   path: string;
   featureArticle?: boolean;
   preview: IArticleHeaderData;
+  seo?: iSEO;
+}
+
+export interface iForum {
+  path: string;
+  featureForum?: boolean;
+  preview: IForumHeaderData;
   seo?: iSEO;
 }
 

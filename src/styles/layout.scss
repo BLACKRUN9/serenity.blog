@@ -13,7 +13,26 @@
   }
 }
 
+.withSidebar_forum_wrapper,
+.centered_forum_wrapper {
+  @apply bg-slate-100;
+
+  .forum_content {
+    min-height: 100vh;
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
 .centered_article_wrapper {
+  .article_content,
+  .author_and_more {
+    max-width: 1000px;
+  }
+}
+.centered_forum_wrapper {
   .article_content,
   .author_and_more {
     max-width: 1000px;
@@ -98,14 +117,16 @@
   }
 }
 
+
+
 .more_from_author {
-  &__articles {
+  &__forums {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     cursor: pointer;
 
-    .article_image {
+    .forum_image {
       width: 25%;
       aspect-ratio: 1;
       margin-right: 10px;
@@ -116,7 +137,7 @@
       @apply bg-gray-500;
     }
 
-    .article_title {
+    .forum_title {
       font-size: 16px;
       font-weight: 500;
 
@@ -127,7 +148,7 @@
   }
 }
 
-.withSidebar_article_wrapper {
+.withSidebar_forum_wrapper {
   .more_from_author {
     @include tab {
       display: flex;

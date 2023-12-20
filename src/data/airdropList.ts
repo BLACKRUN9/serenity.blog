@@ -1,26 +1,34 @@
 const airdropList = [
     {
-      title: 'Blog Theme',
+      title: 'Airdrop',
       url: '/url',
     },
     {
-      title: 'Corporate Theme',
+      title: 'Giveaway',
       url: '/url',
     },
     {
-      title: 'E-commerce Theme',
+      title: 'Retrodrop',
       url: '/url',
     },
     {
-      title: 'Portfolio Theme',
+      title: 'Gleam',
       url: '/url',
     },
     {
-      title: 'Social Media Theme',
+      title: 'Bot',
       url: '/url',
     },
     {
-      title: 'Education Theme',
+      title: 'Testnet',
+      url: '/url',
+    },
+    {
+      title: 'Node',
+      url: '/url',
+    },
+    {
+      title: 'Miner',
       url: '/url',
     },
   ];

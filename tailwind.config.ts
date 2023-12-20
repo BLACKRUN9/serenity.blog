@@ -25,7 +25,6 @@ const tailwind = {
     },
     extend: {
 
-     
       colors: {
        appPurple:{
         100:'#FBDFAF'
@@ -38,6 +37,9 @@ const tailwind = {
        },
        appBackground:{
         100: '#050624'
+       },
+       appSmoky:{
+        100:'#101306'
        },
        blogText:{
         100:"rgb(222 226 227)"
@@ -55,7 +57,8 @@ const tailwind = {
           to: {
             opacity: 0.1,
             transform: 'translate3d(0, -1rem, 0)'
-          }
+          
+        }
         }
       }
     },

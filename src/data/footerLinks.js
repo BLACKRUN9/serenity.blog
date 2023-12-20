@@ -34,8 +34,8 @@ const footerLinks = {
         url: "/contact",
       },
       {
-        name: "External Articles",
-        url: "/external-articles",
+        name: "Airdrop",
+        url: "/airdrop",
       },
       
     ],

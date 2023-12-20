@@ -47,7 +47,7 @@ const Snippets: React.FC<SnippetsProps> = ({
                 <SnippetCard
                   snippet={each}
                   key={i + each._id}
-                  path={`/airdrop/${each.slug.current}`}
+                  path={`/tutorial/${each.slug.current}`}
                 />
               ))
           : null}
@@ -72,11 +72,11 @@ const Snippets: React.FC<SnippetsProps> = ({
       {isArchive && (
         <div className="w-full flex items-center">
           <Link
-            href={"/airdrop"}
+            href={"/tutorial"}
             className="
                                 w-auto h-auto text-sm py-3 px-10 text-center dark:bg-slate-800 bg-appRed-100 rounded-full mx-auto text-appBackground-100 font-bold hover:!text-appBackground-100 dark:hover:!text-appRed-100 transition-all transform hover:scale-105"
           >
-            View All Airdrop
+            View All Tutorial
           </Link>
         </div>
       )}

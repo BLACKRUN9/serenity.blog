@@ -29,14 +29,7 @@ const ContentsTypeCard = () => {
           Home
         </span>
       </a>
-      <Link href={"/external-articles"}>
-        <span
-          className={styleCss}
-          style={{ background: colorPalette[1] }}
-        >
-          External Articles
-        </span>
-      </Link>
+      
     </>
   );
 };

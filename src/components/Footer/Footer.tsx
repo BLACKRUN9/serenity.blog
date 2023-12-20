@@ -8,7 +8,7 @@ const Footer = () => {
   const { legal, quick, socialMedia } = footerLinks;
   return (
     <div className="mt-auto">
-      <footer className="bg-black py-8 mt-20">
+      <footer className="bg-black py-8 border-appRed-100 hover:dark:border-appRed-100 dark:border-appCyan-100 hover:shadow-xl hover:shadow-appRed-100/30 shadow-xl shadow-appCyan-100/30 dark:drop-shadow-lg dark:bg-transparent  mt-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* About Us */}

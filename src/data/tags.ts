@@ -1,7 +1,7 @@
 const tags=[
     {
-        name:"Reactjs",
-        url:"https://reactjs.org/"
+        name:"New Airdrop",
+        url:"/tags/new-airdrop"
     },
     {
         name:"Nodejs",

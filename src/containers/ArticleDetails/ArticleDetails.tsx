@@ -29,10 +29,10 @@ const Blog = ({ post, relatedPosts, isSnippet,isSeries }: any) => {
       <section
         className={combineClasses(
           classes.centered_article_wrapper,
-          "dark:bg-slate-900 dark:text-white"
+          "dark:bg-[#101306] dark:text-white"
         )}
       >
-        <div className="flex flex-row-reverse">
+        <div className="flex  flex-row-reverse">
           <div className="container px-0 md:px-[15px] pt-[50px] pb-[50px]">
             <article
               className={combineClasses(

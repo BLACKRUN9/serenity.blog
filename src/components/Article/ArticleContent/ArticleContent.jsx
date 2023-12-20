@@ -1,15 +1,15 @@
 import { PortableText } from "@portabletext/react";
 
-import articePortableText from './PortableComponent'
+import articelPortableText from './PortableComponent'
 const ArticleContent = ({ ARTICLE_CONTENT }) => {
   const body = ARTICLE_CONTENT;
   return (
-    <>
-      <div className="dark:text-gray-300">
-        <PortableText value={body} components={articePortableText} /></div>
+    <div className=''>
+      <div className="dark:text-gray-100 ">
+        <PortableText value={body} components={articelPortableText} /></div>
 
 
-    </>
+    </div>
   );
 };
 

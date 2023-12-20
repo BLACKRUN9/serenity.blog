@@ -11,7 +11,7 @@ interface HomeArticleProps {
   noOfNews?: number;
   news: any;
   isSeries:boolean;
-  isExternal:boolean
+  isGiveaways:boolean
 }
 
 const HomeArticles: React.FC<HomeArticleProps> = ({
@@ -19,7 +19,7 @@ const HomeArticles: React.FC<HomeArticleProps> = ({
   noOfNews,
   news,
   isSeries,
-  isExternal
+  isGiveaways
 }) => {
   const newsPerPage = noOfNews || 9;
 
@@ -39,7 +39,7 @@ const HomeArticles: React.FC<HomeArticleProps> = ({
   };
   // console.log(news,'news')
 
-  const newsToDisplay = noOfNews || 3;
+  const newsToDisplay = noOfNews  || 3;
   
   return (
     
@@ -52,8 +52,8 @@ const HomeArticles: React.FC<HomeArticleProps> = ({
                 <ArticleCard
                   article={each}
                   key={i}
-                  isExternal={isExternal}
-                  path={`${isSeries ? "/series/":isExternal?'':"/news/"}${each.slug.current}`}
+                  isGiveaways={isGiveaways}
+                  path={`${isSeries ? "/press-release/":isGiveaways?'':"/news/"}${each.slug.current}`}
                 />
               ))
           : null}
