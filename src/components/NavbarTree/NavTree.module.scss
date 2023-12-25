@@ -111,8 +111,8 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: darkgrey;
-        outline: 1px solid slategrey;
+        background-color: rgb(255, 153, 0);
+        outline: 1px solid rgb(255, 225, 194);
     }
 
     &.open {
@@ -123,35 +123,3 @@
         max-width: 380px;
     }
 }
-.group:hover .group-hover\:rotate-\[360deg\] {
-    --tw-rotate: 360deg;
-  }
-  .group:hover .group-hover\:rotate-\[360deg\],
-  .group:hover .group-hover\:scale-y-100 {
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-  .group:hover .group-hover\:scale-y-100 {
-    --tw-scale-y: 1;
-  }
-  .group\/button:hover .group-hover\/button\:border-yellow {
-    --tw-border-opacity: 1;
-    border-color: rgb(255 255 0 / var(--tw-border-opacity));
-  }
-  .group:hover .group-hover\:fill-yellow {
-    fill: #ff0;
-  }
-  .group:hover .group-hover\:opacity-100,
-  .group\/table:hover .group-hover\/table\:opacity-100 {
-    opacity: 1;
-  }
-  .group:hover .group-hover\:mix-blend-normal {
-    mix-blend-mode: normal;
-  }
-  .group:hover .group-hover\:saturate-100 {
-    --tw-saturate: saturate(1);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-      var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
-      var(--tw-sepia) var(--tw-drop-shadow);
-  }

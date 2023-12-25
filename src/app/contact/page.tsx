@@ -19,7 +19,7 @@ const Contact = async () => {
     const getFirstContact = contact[0];
     return (
         <>
-            <section className='m-4 mt-20 dark:bg-slate-900 dark:text-white'>
+            <section className='m-4 mt-20 dark:bg-black bg-white dark:text-white'>
                 <div className='container px-0 pb-[20px] pt-[10px] md:px-[15px]'>
                     {contact?.length === 0 ? (
                         <p>No Contact Information Found</p>

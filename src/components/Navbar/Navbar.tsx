@@ -63,7 +63,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="flex items-start">
+          <div className="flex items-center">
           <Link href="/free-palestine">
                                 <Image
                                     alt={"palestini-flag"}

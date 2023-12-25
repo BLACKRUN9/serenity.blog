@@ -31,6 +31,12 @@ const tailwind = {
        appPurple:{
         100:'#FBDFAF'
        },
+       appVeronica:{
+        100:'#A000F6'
+       },
+       appFuchsia:{
+        100:'#F600EA'
+       },
        appRed:{
         100:'#F98000'
        },
@@ -46,6 +52,10 @@ const tailwind = {
        appCyan:{
         100: '#00FFFF'
        },
+       appRaisin:{
+        100: '#2B282B'
+       },
+       
        blogText:{
         100:"rgb(222 226 227)"
        }

@@ -15,7 +15,7 @@ const ArticleTags = ({
 }) => {
   const conditionalClass = !isLight
     ? " ring-2 ring-gray-500 ring-offset-4 ring-offset-slate-50 dark:ring-offset-slate-900 text-gray-500 dark:text-white"
-    : " text-white  dark:text-black ";
+    : " text-black  dark:text-white ";
     // console.log('process',process.env.SANITY_API_READ_TOKEN)
   return (
     <div  className='rounded ring-2 ring-appCyan-100'

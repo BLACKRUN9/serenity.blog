@@ -1,0 +1,8 @@
+/* styles.css */
+@import '../../../utils/utils.ts'
+
+
+.gradient-ring {
+    --tw-ring-color: /* your color logic here */;
+  }
+  

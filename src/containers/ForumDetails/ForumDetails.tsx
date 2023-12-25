@@ -57,7 +57,7 @@ const Blog2 = ({ airdrop, relatedAirdrops, isSnippet,isLatest }: any) => {
               <ForumFooter
               isSnippet={isSnippet}
               authorInfo={authorInfo}
-              relatedPosts={relatedAirdrops}
+              relatedAirdrops={relatedAirdrops}
               isLatest={isLatest}
               />
             </div>

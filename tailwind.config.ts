@@ -44,7 +44,6 @@ const tailwind = {
        blogText:{
         100:"rgb(222 226 227)"
        }
-
       },
       right:{
         12:"12rem"

@@ -1,22 +1,22 @@
 "use client";
 import { useEffect, useState } from "react";
-import { SnippetCard } from "@/components";
+import { LatestCard } from "@/components";
 import Link from "next/link";
 import ReactPaginate from "react-paginate";
 import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai";
 
-interface SnippetsProps {
+interface LatestsProps {
   isArchive: boolean;
   airdrop: any;
-  noOfSnippet: number;
+  noOfLatest: number;
 }
 
-const Snippets: React.FC<SnippetsProps> = ({
+const Snippets: React.FC<LatestsProps> = ({
   isArchive,
   airdrop,
-  noOfSnippet,
+  noOfLatest,
 }) => {
-  const articlesPerPage = noOfSnippet || 9;
+  const articlesPerPage = noOfLatest || 9;
 
   // const [articles, setArticles] = useState([]);
 
@@ -44,8 +44,8 @@ const Snippets: React.FC<SnippetsProps> = ({
           ? (currentItems as any)
               .slice(0, articlesPerPage )
               .map((each: any, i: number) => (
-                <SnippetCard
-                  snippet={each}
+                <LatestCard
+                latest={each}
                   key={i + each._id}
                   path={`/tutorial/${each.slug.current}`}
                 />
@@ -76,7 +76,7 @@ const Snippets: React.FC<SnippetsProps> = ({
             className="
                                 w-auto h-auto text-sm py-3 px-10 text-center bg-transparent border border-4 border-b-appFuchsia-100 border-s-appFuchsia-100 border-e-appVeronica-100 border-t-appVeronica-100 shadow-lg hover:shadow-lg shadow-appFuchsia-100 hover:shadow-appCyan-100 rounded-md dark:drop-shadow-lg ring-2 ring-black dark:ring-white ring-offset-4 ring-offset-slate-50 dark:text-white dark:ring-offset-appSmoky-900  bg-appRed-100 rounded-full mx-auto text-appBackground-100 font-bold hover:!text-appBackground-100 dark:hover:!text-appRed-100 transition-all transform hover:scale-105"
           >
-            View All Tutorial
+            Latest Post
           </Link>
         </div>
       )}

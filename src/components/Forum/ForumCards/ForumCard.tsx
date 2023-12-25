@@ -38,12 +38,12 @@ const ForumCard = ({ airdrop, path, isGiveaways }: IProp) => {
     >
       <div
         className={combineClasses(
-          classes.forum_card,
-          "border-b-[5px] border-appRed-100 dark:bg-appSeren-100 dark:text-appPurple-100 dark:drop-shadow-lg flex flex-col justify-between pb-5"
+          classes.article_card,
+          "border-b-[5px] dark:text-gray-300  border-appRed-100 hover:dark:border-appRed-100 dark:border-appCyan-100 hover:shadow-lg hover:shadow-appRed-100/80 shadow-lg shadow-appCyan-100/80 dark:bg-[#101306] dark:drop-shadow-lg flex flex-col justify-between pb-5"
         )}
       >
         <div>
-          <div className={"rounded-t-[4px] overflow-hidden h-[200px] relative"}>
+          <div className={"rounded-t-[4px] ring ring-[#00FFFF] shadow-lg shadow-appCyan-100/50 ring-offset-2 ring-offset-slate-50 dark:ring-offset-slate-900  overflow-hidden h-[200px] relative"}>
             <Image
               src={`${urlFor(_ref)}`}
               alt={alt}
@@ -57,7 +57,7 @@ const ForumCard = ({ airdrop, path, isGiveaways }: IProp) => {
 
           <div className={"d-block px-[25px] space-y-4 pb-0"}>
             <p
-              className={"font-bold text-xs pt-3 mb-0 md:mb-3 text-appRed-100"}
+              className={"font-bold text-xs pt-3 mb-0 md:mb-3 text-appRed-100 dark:text-appCyan-100"}
             >
               <span className="pr-1">
               {format(new Date(publishedAt), "MMMM d, yyyy")}
@@ -74,7 +74,7 @@ const ForumCard = ({ airdrop, path, isGiveaways }: IProp) => {
               )}
             </p>
 
-            {isGiveaways? (
+            {isGiveaways ? (
               <a href={path} target="_blank"
               rel="noopener noreferrer" 
               aria-label={`${title}`}
@@ -101,8 +101,8 @@ const ForumCard = ({ airdrop, path, isGiveaways }: IProp) => {
             
             <p
               className={combineClasses(
-                classes.forum_card__intro,
-                "text-sm font-normal mt-2 md:mt-1"
+                classes.article_card__intro,
+                "text-sm dark:text-slate-500 font-normal mt-2 md:mt-1"
               )}
             >
               {meta_description.slice(0, 150)} ...

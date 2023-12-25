@@ -479,7 +479,7 @@ export const airdropsQuery = groq`*[_type == "airdrop"] | order(_createdAt desc)
   _updatedAt,
 title,
 body,
-isSeries,
+isGiveaways,
 meta_description,
 mainImage,
 slug,
@@ -749,3 +749,55 @@ slug,
 publishedAt,
 "tags": tags[]-> {title,slug},
 }`;
+
+// Latests
+export const latestPathsQuery = groq`*[_type == "latest" && defined(slug.current)][]{
+  "params": { "slug": slug.current }
+}`;
+
+export const latestQuery = groq`*[_type == "snippet" && slug.current == $slug][0]{
+  _createdAt,
+  _updatedAt,
+title,
+body,
+isSeries,
+tags,
+slug,
+meta_description,
+"tags": tags[]-> {title},
+"author": author -> {name,slug,image,designation,profiles,bio,about},
+"series":series -> {title,slug},
+"category": categories[]-> {title,slug},
+publishedAt,
+
+
+}`;
+
+export const latestsQuery = groq`*[_type == "latest"]{
+  _createdAt,
+  _updatedAt,
+title,
+body,
+isSeries,
+tags,
+slug,
+meta_description,
+"tags": tags[]-> {title},
+"author": author -> {name,slug,image,designation,profiles,bio,about},
+"series":series -> {title,slug},
+"category": categories[]-> {title,slug},
+publishedAt,
+}`;
+export const getRandomLatestsQuery = groq`*[_type == "latest"] | order(_createdAt asc){
+  _createdAt,
+  title,
+  body,
+  "author": author -> {name, slug, image},
+  meta_description,
+  mainImage,
+  slug,
+  "tags": tags[]-> {title, slug},
+  "category": categories[]-> {title, slug},
+  publishedAt,
+}[0..2]`;
+

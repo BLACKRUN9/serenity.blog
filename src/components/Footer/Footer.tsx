@@ -85,7 +85,7 @@ const Footer = () => {
 const CopyRightFooter = () => {
   return (
     <>
-      <section className="bg-slate-900 text-white py-4">
+      <section className="dark:bg-black bg-appRed-100 text-Black dark:text-white py-4">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Column 1 */}
@@ -104,7 +104,7 @@ const CopyRightFooter = () => {
 
             {/* Column 3 */}
             <div className="text-center md:text-right">
-              <p className="text-sm">v1.0.0</p>
+              <p className="text-sm">v2.0.0</p>
             </div>
           </div>
         </div>
