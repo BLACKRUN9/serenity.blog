@@ -83,7 +83,7 @@ const HomeArticles: React.FC<HomeArticleProps> = ({
           <Link
             href={"/news"}
             className="
-                                w-auto h-auto text-sm py-3 px-10 text-center bg-transparent border border-4 border-b-appFuchsia-100 border-s-appFuchsia-100 border-e-appVeronica-100 border-t-appVeronica-100 shadow-lg hover:shadow-lg shadow-appFuchsia-100 hover:shadow-appCyan-100 rounded-md dark:drop-shadow-lg ring-2 ring-black dark:ring-white ring-offset-4 ring-offset-slate-50 dark:ring-offset-appSmoky-900 bg-appRed-100 rounded-full mx-auto text-white font-bold hover:!text-appVeronica-100 dark:hover:!text-appRed-100 transition-all transform hover:scale-105"
+                                w-auto h-auto text-sm py-3 px-10 text-center bg-transparent border border-4 border-b-appFuchsia-100 border-s-appFuchsia-100 border-e-appVeronica-100 border-t-appVeronica-100 shadow-lg hover:shadow-lg shadow-appFuchsia-100 hover:shadow-appCyan-100 rounded-md dark:drop-shadow-lg ring-2 ring-black dark:ring-white ring-offset-4 ring-offset-slate-50 dark:ring-offset-appSmoky-900 bg-appRed-100 rounded-full mx-auto text-black dark:text-appVeronica-100 font-bold hover:!text-appVeronica-100 dark:hover:!text-appRed-100 transition-all transform hover:scale-105"
           >
             View All NEWS
           </Link>
