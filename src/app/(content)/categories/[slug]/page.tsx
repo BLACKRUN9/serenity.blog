@@ -57,10 +57,10 @@ const CategoryDetail = async ({ params }: { params: { slug: string } }) => {
                             noOfNews={9}
                             news={news}
                             isSeries={false}
-                            isExternal={false}
+                            isGiveaways={false}
                         />
                     ) : (
-                        <h1>No News Found </h1>
+                        <h1>Content Not Found 🤧 </h1>
                     )}
                 </div>
             </div>
