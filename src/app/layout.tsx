@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react';
-import NavbarExtra from '@/components/NavbarExtra/Navbar';
 import RootLayout from '../RootLayout/RootLayout'
 import "./globals.scss";
 import {WEBSITE_NAME,META_SEO_KEYWORDS,META_DESCRIPTION} from '@/constants/_APP_SETUP'

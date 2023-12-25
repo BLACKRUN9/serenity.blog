@@ -5,7 +5,7 @@ import {
 } from "@/containers";
 import {
     
-    HomeAirdrops,
+
     Latest as LatestContainer,
 } from "@/containers";
 import { SanityDocument } from "@sanity/client";
