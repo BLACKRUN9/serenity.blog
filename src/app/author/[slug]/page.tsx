@@ -52,7 +52,7 @@ const AuthorDetails = async ({ params }: { params: { slug: string } }) => {
                         isArchive={false} noOfNews={6} 
                         news={author?.posts} 
                         isSeries={false}
-                        isExternal={false}
+                        isGiveaways={false}
                         />
                     ) : (
                         <h1>No Articles Found </h1>
