@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
 import { getGiveawaysQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
+import airdrop from "@/sanity/schemas/airdrop";
 
 export const metadata: Metadata = {
     title: "Giveaway",
@@ -30,8 +31,8 @@ const Giveaways = async () => {
                     {forums?.length > 0 ? (
                         <HomeAirdrops
                             isArchive={false}
-                            noOfForum={1}
-                            forums={forums}
+                            noOfAirdrop={1}
+                            airdrop={airdrop}
                             isLatest={false}
                             isGiveaways={true}
                         />
