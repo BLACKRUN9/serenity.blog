@@ -1,6 +1,8 @@
 // components/ImageSections.js
 // components/ImageSections.js
 'use client'
+import  Link  from 'next/link';
+import { useEffect, useState } from 'react';
 import S1d from '../../../public/images/dark-s1-image.png';
 import S2d from '../../../public/images/dark-s2-image.png';
 import S3d from '../../../public/images/dark-s3-image.png';
@@ -8,37 +10,32 @@ import S1L from '../../../public/images/light-s1-image.png';
 import S2L from '../../../public/images/light-s2-image.png';
 import S3L from '../../../public/images/light-s3-image.png';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useTheme } from 'next-themes';
 
 const ImageSections = () => {
   const { theme } = useTheme();
+  const [images, setImages] = useState({
+    s1: theme === 'dark' ? S1L : S1d,
+    s2: theme === 'dark' ? S2L : S2d,
+    s3: theme === 'dark' ? S3L : S3d,
+  });
 
-  const getImageForTheme = (theme) => {
-    switch (theme) {
-      case 'dark':
-        return {
-          s1: S1d,
-          s2: S2d,
-          s3: S3d,
-        };
-      case 'light':
-        return {
-          s1: S1L,
-          s2: S2L,
-          s3: S3L,
-        };
-      default:
-        return {}; // No default theme
-    }
-  };
+  useEffect(() => {
+    // Load initial images based on the current theme
+    setImages({
+      s1: theme === 'dark' ? S1d : S1L,
+      s2: theme === 'dark' ? S2d : S2L,
+      s3: theme === 'dark' ? S3d : S3L,
+    });
+  }, [theme]);
 
-  const images = getImageForTheme(theme);
 
   return (
     <div className="relative">
       <div className="sticky top-0 flex h-screen items-center justify-center">
-        <Image src={images.s1} alt="First Section" layout="fill" objectFit="cover" />
+      <Image src={images.s1} alt="First Section" layout="fill" objectFit="cover" loading="lazy" />
+
+
         <div className="absolute left-0 right-0 m-auto flex w-2/4 flex-col items-start justify-center gap-4 p-10 backdrop-blur-xl">
           <h2 className="text-2xl dark:text-white text-black font-bold">About</h2>
           <p className="font-sans text-lg dark:text-white text-black">
