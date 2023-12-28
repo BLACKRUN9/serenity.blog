@@ -35,7 +35,7 @@ const News = async () => {
               noOfNews={6} // Updated prop name
               news={news} // Updated variable name
               isSeries={false}
-              isGiveaways={false}
+              isExternal={false}
             />
           ) : (
             <p>No News Found</p>
