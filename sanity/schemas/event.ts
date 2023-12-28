@@ -1,8 +1,8 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "latest",
-  title: "Latest",
+  name: "event",
+  title: "Event",
   type: "document",
   fields: [
     defineField({
@@ -25,32 +25,36 @@ export default defineType({
       type: "text",
     }),
     defineField({
-      name: "meta_tags",
-      title: "Meta Tags",
-      type: "string",
+      name: "mainImage",
+      title: "Main image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: "alt",
+          type: "string",
+          title: "Alternative Text",
+        },
+      ],
     }),
     defineField({
-      name: "author",
-      title: "Author",
-      type: "reference",
-      to: { type: "author" },
-    }),
-    defineField({
-      name: "categories",
-      title: "Categories",
+      name: "tags",
+      title: "Tags",
       type: "array",
-      of: [{ type: "reference", to: { type: "category" } }],
+      of: [{ type: "reference", to: { type: "tags" } }],
     }),
+    defineField({
+      name: "publishedAt",
+      title: "Published at",
+      type: "datetime",
+    }),
+
     defineField({
       name: "body",
       title: "Body",
       type: "blockContent",
-    }),
-    // Assuming you have a "mainImage" field
-    defineField({
-      name: "mainImage",
-      title: "Main Image",
-      type: "image",
     }),
   ],
 

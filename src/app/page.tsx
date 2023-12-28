@@ -1,12 +1,13 @@
 import {
     HeroSection,
     HomeArticles,
+    HomeAirdrops,
     Snippets as SnippetsContainer,
 } from "@/containers";
 import {
     
 
-    Latest as LatestContainer,
+    Latests as LatestContainer,
 } from "@/containers";
 import { SanityDocument } from "@sanity/client";
 import { airdropsQuery, postsQuery, snippetsQuery } from "@/sanity/lib/queries";
@@ -17,7 +18,6 @@ import {WEBSITE_NAME,META_DESCRIPTION} from '@/constants/_APP_SETUP'
 import CounterSection from "@/components/CounterSection/CounterSection"
 import  EventSection  from "../components/EventSection/EventSection";
 import React, { RefObject } from "react";
-import HomeAirdrop from "@/containers/HomeAirdrop/HomeAirdrops";
 
 
 
@@ -58,6 +58,8 @@ export default async function Home() {
         query: snippetsQuery,
     });
 
+ 
+
     const airdrop = await sanityFetch<SanityDocument>({
         query: airdropsQuery,
     });
@@ -84,7 +86,7 @@ export default async function Home() {
                     <div className='container mx-auto mb-20 px-0 lg:px-[15px]'>
                         <div className={"flex flex-wrap"}>
                         
-                            <h1 className='mb-5 w-50 text-appPurple-100 px-3 text-xl ring-2 ring-offset-2 ring-offset-appCyan-100 md:ring-offset-appCyan-100 text-appPurple-100 px-3 text-xl font-bold md:text-3xl'>
+                            <h1 className='mb-5 w-50 text-appRed-100 px-3 text-xl ring-2 ring-offset-2 ring-offset-appCyan-100 md:ring-offset-appCyan-100 dark:text-appFuchsia-100 px-3 text-xl font-bold md:text-3xl'>
                                 READ LATEST NEWS
                             </h1>
 
@@ -95,7 +97,7 @@ export default async function Home() {
                                     isArchive={true}
                                     news={news}
                                     isSeries={false}
-                                    isGiveaways={false}
+                                    isExternal={false}
                                 />
                             ) : (
                                 <p>No Article Found</p>
@@ -107,17 +109,17 @@ export default async function Home() {
                     <div className='container mx-auto mb-20 px-0 lg:px-[15px]'>
                         <div className={"flex flex-wrap"}>
                         
-                            <h1 className='mb-5 w-50 text-appPurple-100 px-3 text-xl ring-2 ring-offset-2 ring-offset-appCyan-100 md:ring-offset-appCyan-100 text-appPurple-100 px-3 text-xl font-bold md:text-3xl'>
+                            <h1 className='mb-5 w-50 text-appRed-100 px-3 text-xl ring-2 ring-offset-2 ring-offset-appCyan-100 md:ring-offset-appCyan-100 dark:text-appFuchsia-100 px-3 text-xl font-bold md:text-3xl'>
                                 Airdrop List
                             </h1>
 
                             <hr className='border-3 ring-2 ring-offset-2 ring-offset-appCyan-100 md:ring-offset-appCyan-100 border-white mx-auto mb-3 w-[98%]' />
                             {airdrop?.length > 0 ? (
-                                <HomeAirdrop
+                                <HomeAirdrops
                                     noOfAirdrop={3}
                                     isArchive={true}
-                                    airdrop={airdrop}
-                                    isLatest={false}
+                                     airdrop={airdrop}
+                                    isEvent={false}
                                     isGiveaways={false}
                                 />
                             ) : (
@@ -128,14 +130,14 @@ export default async function Home() {
                 </Suspense>
                 <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                     <div className={"flex flex-wrap"}>
-                        <h1 className='mb-6 w-90 text-appPurple-100 px-3 text-xl ring-2 ring-offset-2 ring-offset-appCyan-100 md:ring-offset-appCyan-100 font-bold md:text-3xl '>
+                        <h1 className='mb-6 w-90 text-appRed-100 dark:text-appFuchsia-100 px-3 text-xl ring-2 ring-offset-2 ring-offset-appCyan-100 md:ring-offset-appCyan-100 font-bold md:text-3xl '>
                             Tutorial
                         </h1>
                         <hr className='mb-3 border-3 ring-2 ring-offset-2 ring-offset-appCyan-100 md:ring-offset-appCyan-100 border-white mx-auto mb-5 w-[98%]' />
                         {allSnippets?.length > 0 ? (
                             <SnippetsContainer
                                 isArchive={true}
-                                airdrop={allSnippets}
+                                snippet={allSnippets}
                                 noOfSnippet={3}
                             />
                         ) : (

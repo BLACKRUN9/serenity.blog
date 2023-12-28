@@ -5,13 +5,14 @@ import { ArticleCard } from "@/components";
 import Link from "next/link";
 import ReactPaginate from "react-paginate";
 import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai";
+import { isExternal } from "util/types";
 
 interface HomeArticleProps {
   isArchive: boolean;
   noOfNews?: number;
   news: any;
   isSeries:boolean;
-  isGiveaways:boolean
+  isExternal:boolean
 }
 
 const HomeArticles: React.FC<HomeArticleProps> = ({
@@ -19,7 +20,7 @@ const HomeArticles: React.FC<HomeArticleProps> = ({
   noOfNews,
   news,
   isSeries,
-  isGiveaways
+  isExternal
 }) => {
   const newsPerPage = noOfNews || 9;
 
@@ -52,8 +53,8 @@ const HomeArticles: React.FC<HomeArticleProps> = ({
                 <ArticleCard
                   article={each}
                   key={i}
-                  isGiveaways={isGiveaways}
-                  path={`${isSeries ? "/press-release/":isGiveaways?'':"/news/"}${each.slug.current}`}
+                  isExternal={isExternal}
+                  path={`${isSeries ? "/press-release/":isExternal?'':"/news/"}${each.slug.current}`}
                 />
               ))
           : null}

@@ -57,7 +57,7 @@ const CategoryDetail = async ({ params }: { params: { slug: string } }) => {
                             noOfNews={9}
                             news={news}
                             isSeries={false}
-                            isGiveaways={false}
+                            isExternal={false}
                         />
                     ) : (
                         <h1>Content Not Found 🤧 </h1>

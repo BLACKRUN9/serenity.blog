@@ -16,6 +16,8 @@ import profiles from './schemas/profiles'
 import openSource from './schemas/openSource'
 import about from './schemas/about'
 import contact from './schemas/contact'
+import event from './schemas/event'
+
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post, pressRelease, airdrop, giveaways, latest, author, legal,category, contact,profiles,blockContent,tags,series,openSource,snippet,about],
+  types: [post, pressRelease,event, airdrop, giveaways, latest, author, legal, category, contact,profiles,blockContent,tags,series,openSource,snippet,about],
 }

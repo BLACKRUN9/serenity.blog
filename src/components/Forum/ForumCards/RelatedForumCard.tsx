@@ -9,14 +9,14 @@ import { format } from "date-fns";
 import readingTime from "reading-time";
 
 interface IProp {
-    airdrop: IForumHeaderData;
+    forum: IForumHeaderData;
     path: string;
-    isGiveaways: boolean;
+    isEvent: boolean;
     previousAirdrop?:boolean;
-    isLatest:boolean
+    isGiveaways:boolean
 }
 
-const RelatedForumCard = ({ airdrop, path,isGiveaways }: IProp) => {
+const RelatedForumCard = ({ forum, path,isEvent }: IProp) => {
     // set url and path
     
     const {
@@ -32,7 +32,7 @@ const RelatedForumCard = ({ airdrop, path,isGiveaways }: IProp) => {
             alt,
             asset: { _ref },
         },
-    } = airdrop;
+    } = forum;
     const readTime = readingTime(body ? body : []);
 
     return (
@@ -45,7 +45,7 @@ const RelatedForumCard = ({ airdrop, path,isGiveaways }: IProp) => {
             
             <div
                 className={combineClasses(
-                    classes.forum_card,
+                    classes.article_card,
                     "flex flex-col justify-between border-b-[5px] border-appRed-100 pb-5 dark:bg-slate-800 dark:text-white dark:drop-shadow-lg"
                 )}
             >
@@ -74,7 +74,7 @@ const RelatedForumCard = ({ airdrop, path,isGiveaways }: IProp) => {
                             )}
                         </p>
 
-                        {isGiveaways ? (
+                        {isEvent ? (
                             <a
                                 href={path}
                                 target='_blank'
@@ -103,7 +103,7 @@ const RelatedForumCard = ({ airdrop, path,isGiveaways }: IProp) => {
 
                         <p
                             className={combineClasses(
-                                classes.isGiveaways,
+                                classes.article_card__intro,
                                 "mt-2 text-sm font-normal md:mt-1"
                             )}
                         >

@@ -1,20 +1,20 @@
 import { Text, ContentsTypeTab } from "@/components";
-import { Latest as LatestsContainer } from "@/containers";
+import { Snippets as SnippetsContainer } from "@/containers";
 import {WEBSITE_NAME} from '@/constants/_APP_SETUP'
 import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
-import { latestsQuery } from "@/sanity/lib/queries";
+import { snippetsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 export const metadata: Metadata = {
-  title:'latest',
-  description: `latest post by ${WEBSITE_NAME}. Discover quick tips, code examples, and insights for your coding journey.`,
-  keywords: 'latest, crypto, news, insights',
+  title:'Latest',
+  description: `Explore Latest Airdrop by ${WEBSITE_NAME}. Discover quick tips, code examples, and insights for your coding journey.`,
+  keywords: 'tutorial, crypto, news, insights',
 };
 
 
-const Latests = async () => {
-   const allLatests = await sanityFetch<SanityDocument>({
-        query: latestsQuery,
+const Snippets = async () => {
+   const allSnippets = await sanityFetch<SanityDocument>({
+        query: snippetsQuery,
     });
 
   return (
@@ -30,13 +30,13 @@ const Latests = async () => {
         </Text>
         <div className="flex flex-wrap">
           {
-            allLatests?.length > 0 ? (
-              <LatestsContainer
+            allSnippets?.length > 0 ? (
+              <SnippetsContainer 
          isArchive={false}
-         airdrop={allLatests}
-         noOfLatest={9}
+         snippet={allSnippets}
+         noOfSnippet={9}
          />
-            ) : <p>Tutorial Not Found</p>
+            ) : <p> Latest Airdrop Not Found </p>
           }
          
         </div>
@@ -45,4 +45,4 @@ const Latests = async () => {
   );
 };
 
-export default Latests;
+export default Snippets;

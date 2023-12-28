@@ -4,7 +4,7 @@ import { combineClasses } from "@/utils/utils";
 import { urlFor } from "@/utils/sanity-utils";
 
 import Image from "next/legacy/image";
-interface IArticleImage {
+interface IForumImage {
     src: string;
     caption?: string;
     size?: ImageSize;
@@ -21,7 +21,7 @@ const ImageArticle = ({
     className,
     imageWidth,
     imageHeight,
-}: IArticleImage) => {
+}: IForumImage) => {
     return (
         <div
             className={combineClasses(

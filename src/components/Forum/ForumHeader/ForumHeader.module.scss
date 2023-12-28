@@ -1,6 +1,6 @@
 @import "@/styles/utils/mixins";
 
-.forum_header_author {
+.article_header_author {
     &_img {
         width: 50px;
         height: 50px;
@@ -17,7 +17,7 @@
     }
 }
 
-.forumTitle{
+.articleTitle{
     font-size: 40px;
     line-height: 48px;
 
@@ -27,21 +27,7 @@
     }
 }
 
-.centered_forum_header_author{
-    display: flex;
-    width: 70%;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px 0px;
-    margin: 10px auto;
-
-    @include mobile{
-        width: 100%;
-        font-size: 12px;
-    }
-}
-
-.centered_forum_header_author{
+.centered_article_header_author{
     display: flex;
     width: 70%;
     align-items: center;

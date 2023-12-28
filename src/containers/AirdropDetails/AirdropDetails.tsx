@@ -13,9 +13,9 @@ import {
 } from "@/components";
 import { AiOutlineArrowUp } from "react-icons/ai";
 
-const Blog2 = ({ airdrop, relatedAirdrops, isSnippet,isLatest }: any) => {
+const Blog = ({ airdrop, relatedAirdrops, isLatest,isGiveaways }: any) => {
   const target: RefObject<HTMLDivElement> = React.createRef();
-  const authorInfo=airdrop.author
+  const authorInfo=airdrop?.author
   const isBrowser = () => typeof window !== 'undefined';
 
   function scrollToTop() {
@@ -29,10 +29,10 @@ const Blog2 = ({ airdrop, relatedAirdrops, isSnippet,isLatest }: any) => {
       <section
         className={combineClasses(
           classes.centered_article_wrapper,
-          "dark:bg-slate-900 dark:text-white"
+          "dark:bg-[#101306] dark:text-white"
         )}
       >
-        <div className="flex flex-row-reverse">
+        <div className="flex  flex-row-reverse">
           <div className="container px-0 md:px-[15px] pt-[50px] pb-[50px]">
             <article
               className={combineClasses(
@@ -41,24 +41,24 @@ const Blog2 = ({ airdrop, relatedAirdrops, isSnippet,isLatest }: any) => {
               )}
               ref={target}
             >
-              <ForumHeader FORUM_DETAILS={airdrop} isSnippet={isSnippet} />
+              <ForumHeader FORUM_DETAILS={airdrop} isLatest={isLatest} />
               <div>
-                <ForumContent FORUM_CONTENT={airdrop.body} />
+                <ForumContent FORUM_CONTENT={airdrop?.body} />
               </div>
             </article>
             <Seperator />
             <p className="my-8 text-lg text-center">
-              Share this is News <br /> Comment ⬇️ .
+              Share this is Airdrop <br /> Comment ⬇️ .
             </p>
             <Seperator />
             
             <div className={combineClasses(classes.author_and_more, "mx-auto")}>
               
               <ForumFooter
-              isSnippet={isSnippet}
-              authorInfo={authorInfo}
-              relatedAirdrops={relatedAirdrops}
               isLatest={isLatest}
+              authorInfo={authorInfo}
+              relatedPosts={relatedAirdrops}
+              isGiveaways={isGiveaways}
               />
             </div>
           </div>
@@ -72,4 +72,4 @@ const Blog2 = ({ airdrop, relatedAirdrops, isSnippet,isLatest }: any) => {
   );
 };
 
-export default Blog2;
+export default Blog;

@@ -60,6 +60,19 @@ export interface ISnippet {
   seo?: iSEO;
 }
 
+export interface ILatest {
+  path: string;
+  preview: ILatestHeaderData;
+  seo?: iSEO;
+}
+
+export interface ILatestHeaderData {
+  date: string;
+  title: string;
+}
+
+
+
 export interface IOpenSourceData {
   date: string;
   title: string;

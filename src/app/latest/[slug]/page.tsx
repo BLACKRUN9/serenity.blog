@@ -1,7 +1,7 @@
-import { ForumDetails ,} from "@/containers";
+import { AirdropDetails ,} from "@/containers";
 import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
-import {  getRandomLatestsQuery,latestQuery } from "@/sanity/lib/queries";
+import {  getRandomSnippetsQuery,snippetQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 
 
@@ -13,7 +13,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const airdrop = await sanityFetch<SanityDocument>({
-    query: latestQuery,
+    query: snippetQuery,
     params,
 });
   if (!airdrop)
@@ -30,24 +30,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 
-const LatestsDetail = async ({ params }: { params: { slug: string } }) => {
-  // const post = await getSnippet(params.slug);
+const SnippetsDetail = async ({ params }: { params: { slug: string } }) => {
+  // const airdrop = await getSnippet(params.slug);
   const airdrop = await sanityFetch<SanityDocument>({
-    query: latestQuery,
+    query: snippetQuery,
     params,
 });
   const relatedAirdrops = await sanityFetch<SanityDocument>({
-    query: getRandomLatestsQuery,
+    query: getRandomSnippetsQuery,
     params,
 });
   return (
-    <ForumDetails
-     airdrop={airdrop} 
+    <AirdropDetails
+    airdrop={airdrop} 
      isSeries={false}
-     isLatest={true}
+     isSnippet={true}
     relatedAirdrops={relatedAirdrops}
     />
   );
 };
 
-export default LatestsDetail;
+export default SnippetsDetail;

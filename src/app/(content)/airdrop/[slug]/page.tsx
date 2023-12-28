@@ -1,8 +1,8 @@
-import ForumDetails from "@/containers/ForumDetails/ForumDetails"
+import { AirdropDetails } from "@/containers";
 import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
 import { airdropQuery,getRandomAirdropsQuery ,
-    latestRelatedAirdrops,latestNextAndPerviousAirdropOfRelatedAirdrop} from "@/sanity/lib/queries";
+    giveawaysRelatedAirdrops,giveawaysNextAndPerviousAirdropOfRelatedAirdrop} from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 export const revalidate = false
 
@@ -33,27 +33,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 
 
-const SingleArticle = async ({ params }: Props) => {
+const SingleForum = async ({ params }: Props) => {
     const airdrop = await sanityFetch<SanityDocument>({
         query: airdropQuery,
         params,
     });
-    const isLatest = airdrop?.isLatest;
+    const isGiveaways = airdrop?.isGiveaways;
     let relatedAirdrops;
-    if (isLatest) {
+    if (isGiveaways) {
         // relatedAirdrops = await sanityFetch<SanityDocument>({
-        //     query: latestNextAndPerviousAirdropOfRelatedAirdrop,
+        //     query: seriesNextAndPerviousAirdropOfRelatedAirdrop,
         //     params:{
-        //         currentAirdropSlug:params?.slug,
-        //         seriesSlug:airdrop?.latest?.slug?.current
+        //         currentPostSlug:params?.slug,
+        //         seriesSlug:airdrop?.giveaways?.slug?.current
         //     },
             
         // });
         relatedAirdrops = await sanityFetch<SanityDocument>({
-            query: latestRelatedAirdrops,
+            query: giveawaysRelatedAirdrops,
             params:{
                 currentAirdropSlug:params?.slug,
-                latestSlug:airdrop?.latest?.slug?.current
+                giveawaysSlug:airdrop?.giveaways?.slug?.current
             },
             
         });
@@ -69,13 +69,13 @@ const SingleArticle = async ({ params }: Props) => {
 
 
     return (
-        <ForumDetails
-        isLatest={isLatest}
-            isSnippet={false}
+        <AirdropDetails
+        isGiveaways={isGiveaways}
+            isLatest={false}
             airdrop={airdrop}
             relatedAirdrops={relatedAirdrops}
         />
     );
 };
 
-export default SingleArticle;
+export default SingleForum;

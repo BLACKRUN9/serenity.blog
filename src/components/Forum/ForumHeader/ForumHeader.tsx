@@ -7,13 +7,13 @@ import Image from "next/legacy/image";
 import { format } from "date-fns";
 import Link from "next/link";
 
-const ForumHeader = ({ FORUM_DETAILS, isSnippet }: any) => {
+const ForumHeader = ({ FORUM_DETAILS, isLatest }: any) => {
     const {
         title, author,
         publishedAt,
         _updatedAt,
         mainImage,
-        latest,
+        giveaways,
         tags,
         estimatedReadingTime,
         mainImageWidth,
@@ -24,7 +24,7 @@ const ForumHeader = ({ FORUM_DETAILS, isSnippet }: any) => {
         <div className='mb-[30px] font-bold'>
             <h1
                 className={combineClasses(
-                    classes.forumTitle,
+                    classes.articleTitle,
                     "mb-[5px] mt-[20px] text-center text-2xl font-bold md:text-4xl"
                 )}
             >
@@ -52,7 +52,7 @@ const ForumHeader = ({ FORUM_DETAILS, isSnippet }: any) => {
                 </div>
                 <div className='ml-5 text-slate-400'>📖 {estimatedReadingTime ? estimatedReadingTime : '2'} mins</div>
             </div>
-            {!isSnippet && (
+            {!isLatest && (
                 <ForumImage
                     src={`${urlFor(mainImage?.asset?._ref)}`}
                     alt={mainImage?.alt}
@@ -60,7 +60,7 @@ const ForumHeader = ({ FORUM_DETAILS, isSnippet }: any) => {
                     imageHeight={mainImageHeight}
                 />
             )}
-            {!isSnippet && (
+            {!isLatest&& (
                 <ForumTags tags={tags} center={true} isLight={true} />
             )}
 
@@ -69,15 +69,15 @@ const ForumHeader = ({ FORUM_DETAILS, isSnippet }: any) => {
                     "flex flex-col flex-wrap justify-center text-center"
                 )}
             >
-                {!isSnippet && latest !== null && (
+                {!isLatest && giveaways !== null && (
                     <div className='text-[14px] m-1 md:text-lg'>
                         <p>
-                            <span>LATEST ---{">"}</span>
+                            <span>Giveaways---{">"}</span>
                             <Link
-                                href={latest?.slug?.current}
+                                href={giveaways?.slug?.current}
                                 className='text-appSeren-100 dark:text-appRed-100'
                             >
-                                {latest?.title}
+                                {giveaways?.title}
                             </Link>
                         </p>
                     </div>

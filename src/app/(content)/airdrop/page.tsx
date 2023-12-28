@@ -7,8 +7,8 @@ import { airdropsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 
 export const metadata: Metadata = {
-  title: "Airdrop",
-  description: `Dive into insightful Airdrop by ${WEBSITE_NAME}. Testnet, Node, Crypto, Waitlist.`,
+  title: "Aardrop",
+  description: `Dive into insightful Airdrop by ${WEBSITE_NAME}. Web3, article, Crypto, insight.`,
   keywords: META_SEO_KEYWORDS,
 };
 
@@ -26,7 +26,7 @@ const Airdrop = async () => {
           title
           className="mb-5 mt-10 text-appBackground-100 dark:text-appRed-100"
         >
-          AIRDROP
+          Airdrop 🪐
         </Text>
         <div className={"flex flex-col flex-wrap"}>
           {airdrop?.length > 0 ? ( // Updated variable name
@@ -34,8 +34,8 @@ const Airdrop = async () => {
               isArchive={false}
               noOfAirdrop={6} // Updated prop name
               airdrop={airdrop} // Updated variable name
-              isLatest={false}
               isGiveaways={false}
+              isEvent={false}
             />
           ) : (
             <p>No Airdrop Found</p>

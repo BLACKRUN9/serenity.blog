@@ -39,7 +39,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    @apply text-appPurple-100;
+    @apply text-appFuchsia-100;
   }
 }
 
@@ -107,7 +107,7 @@ hr {
     margin: 0px 10px;
 
     a:hover {
-      @apply text-appPurple-100;
+      @apply text-appFuchsia-100;
     }
 
     &.disabled {

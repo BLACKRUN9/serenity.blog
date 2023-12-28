@@ -1,46 +1,48 @@
-import { SnippetCard } from "@/components";
+import { LatestCard } from "@/components";
 import RelatedForumCard from "../ForumCards/RelatedForumCard";
 interface RelatedForumProps {
     relatedAirdrops: any;
-    isSnippet: boolean;
     isLatest: boolean;
+    isGiveaways: boolean;
+    
 }
 
 const RelatedForums: React.FC<RelatedForumProps> = ({
     relatedAirdrops,
-    isSnippet,
     isLatest,
+    isGiveaways,
+    
 }) => {
     return (
         <>
             <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                 <div className={"flex flex-wrap"}>
                     <h1 className='mb-5 w-full px-3 text-xl font-bold text-appSeren-100 dark:text-appRed-100 md:text-3xl'>
-                        READ MORE {isSnippet ? "SNIPPETS" : "AIRDROP"}
+                        READ MORE {isGiveaways ? "GIVEAWAYS" : "AIRDROP"}
                     </h1>
                     <hr className='border-1 mx-auto mb-5 w-[98%]' />
-                    {!isSnippet && relatedAirdrops?.length
+                    {!isGiveaways && relatedAirdrops?.length
                         ? relatedAirdrops 
                               .slice(0, 2)
                               .map((each: any, i: number) => (
                                   <RelatedForumCard
-                                      airdrop={each}
+                                      forum={each}
                                       key={i + each._id}
-                                      isGiveaways={false}
+                                      isEvent={false}
                                       previousAirdrop={false}
-                                      isLatest={false}
+                                      isGiveaways={false}
                                       path={`/airdrop/${each.slug.current}`}
                                   />
                               ))
                         : null}
-                    {isSnippet && relatedAirdrops?.length
+                    {isGiveaways && relatedAirdrops?.length
                         ? relatedAirdrops
                               .slice(0, 3)
                               .map((each: any, i: number) => (
-                                  <SnippetCard
-                                      snippet={each}
+                                  <LatestCard
+                                      latest={each}
                                       key={i + each._id}
-                                      path={`/snippets/${each.slug.current}`}
+                                      path={`/latest/${each.slug.current}`}
                                   />
                               ))
                         : null}
@@ -74,9 +76,9 @@ const RelatedForums: React.FC<RelatedForumProps> = ({
                             />
                         )} */}
 
-                    {(isLatest &&
-                        !isSnippet &&
-                        relatedAirdrops.length === 0 && (
+                    {(isGiveaways &&
+                        !isLatest &&
+                        relatedAirdrops?.length === 0 && (
                             <p className={"mb-0 px-3 md:mb-3"}>
                                 Currently, there is no news available in
                                 this series. Stay tuned for upcoming updates and

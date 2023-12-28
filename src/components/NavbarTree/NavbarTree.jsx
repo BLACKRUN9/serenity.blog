@@ -6,11 +6,9 @@ import {
   combineClasses,
   removeBodyNoScroll,
 } from "@/utils/utils";
-import classes from "./NavTree.module.scss";
 
 import { useTheme } from "next-themes";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
-import Link from 'next/link'
 import React, { useState } from 'react'
 import NavLink from './NavLink'
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";

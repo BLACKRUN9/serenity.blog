@@ -9,12 +9,12 @@ import { format } from "date-fns";
 import readingTime from "reading-time";
 
 interface IProp {
-  airdrop: IForumHeaderData;
+  forum: IForumHeaderData;
   path: string;
-  isGiveaways: boolean;
+  isEvent: boolean;
 }
 
-const ForumCard = ({ airdrop, path, isGiveaways }: IProp) => {
+const ForumCard = ({ forum, path, isEvent }: IProp) => {
   // set url and path
   const {
     // _createdAt,
@@ -28,7 +28,7 @@ const ForumCard = ({ airdrop, path, isGiveaways }: IProp) => {
       alt,
       asset: { _ref },
     },
-  } = airdrop;
+  } = forum;
   const readTime = readingTime(body ? body :[]);
 
   console.log()
@@ -74,7 +74,7 @@ const ForumCard = ({ airdrop, path, isGiveaways }: IProp) => {
               )}
             </p>
 
-            {isGiveaways ? (
+            {isEvent ? (
               <a href={path} target="_blank"
               rel="noopener noreferrer" 
               aria-label={`${title}`}

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-import  ForumCard  from "@/components/Forum/ForumCards/ForumCard";
+import { ForumCard } from "@/components";
 import Link from "next/link";
 import ReactPaginate from "react-paginate";
 import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai";
@@ -10,28 +10,31 @@ interface HomeAirdropProps {
   isArchive: boolean;
   noOfAirdrop?: number;
   airdrop: any;
-  isLatest:boolean;
-  isGiveaways:boolean
+  isGiveaways:boolean;
+  isEvent:boolean
 }
 
-const HomeAirdrop: React.FC<HomeAirdropProps> = ({
+const HomeAirdrops: React.FC<HomeAirdropProps> = ({
   isArchive,
   noOfAirdrop,
   airdrop,
-  isLatest,
-  isGiveaways
+  isGiveaways,
+  isEvent
 }) => {
-  const airdropPerPage = noOfAirdrop || 9;
+  const airdropPerPage = noOfAirdrop || 3;
 
   const [currentItems, setCurrentItems] = useState(airdrop || []);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
-    const endOffset = itemOffset + airdropPerPage;
-    setCurrentItems(airdrop.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(airdrop.length / airdropPerPage));
+    if (airdrop) {
+      const endOffset = itemOffset + airdropPerPage;
+      setCurrentItems(airdrop.slice(itemOffset, endOffset));
+      setPageCount(Math.ceil(airdrop.length / airdropPerPage));
+    }
   }, [itemOffset, airdropPerPage, airdrop]);
+  
 
   const handlePageClick = (event: any) => {
     const newOffset = (event.selected * airdropPerPage) % airdrop.length;
@@ -39,7 +42,7 @@ const HomeAirdrop: React.FC<HomeAirdropProps> = ({
   };
   // console.log(airdrop,'airdrop')
 
-  const newsToDisplay = noOfAirdrop || 3;
+  const airdropToDisplay = noOfAirdrop || 9;
   
   return (
     
@@ -47,13 +50,13 @@ const HomeAirdrop: React.FC<HomeAirdropProps> = ({
       <div className="flex flex-wrap">
         {currentItems
           ? (currentItems as any)
-              .slice(0, newsToDisplay)
+              .slice(0, airdropToDisplay)
               .map((each: any, i: number) => (
                 <ForumCard
-                  airdrop={each}
+                  forum={each}
                   key={i}
-                  isGiveaways={isGiveaways}
-                  path={`${isLatest ? "/latest/":isGiveaways?'':"/giveaways"}${each.slug.current}`}
+                  isEvent={isEvent}
+                  path={`${isGiveaways ? "/giveaways/":isEvent?'/event/':"/airdrop/"}${each.slug.current}`}
                 />
               ))
           : null}
@@ -63,7 +66,7 @@ const HomeAirdrop: React.FC<HomeAirdropProps> = ({
 
       {
       !isArchive &&
-      airdrop?.length > newsToDisplay && (
+      airdrop?.length > airdropToDisplay && (
          <div className="flex flex-col justify-center">
          <ReactPaginate
            breakLabel="..."
@@ -84,8 +87,8 @@ const HomeAirdrop: React.FC<HomeAirdropProps> = ({
             href={"/airdrop"}
             className="
             w-auto h-auto text-sm py-3 px-10 text-center bg-transparent border border-4 border-b-appFuchsia-100 border-s-appFuchsia-100 border-e-appVeronica-100 border-t-appVeronica-100 shadow-lg hover:shadow-lg shadow-appFuchsia-100 hover:shadow-appCyan-100 rounded-md dark:drop-shadow-lg ring-2 ring-black dark:ring-white ring-offset-4 ring-offset-slate-50 dark:ring-offset-appSmoky-900 bg-appRed-100 rounded-full mx-auto text-black dark:text-appVeronica-100 font-bold hover:!text-appVeronica-100 dark:hover:!text-appRed-100 transition-all transform hover:scale-105"
-          >
-            View All Airrdrop
+            >
+            View All Airdrops
           </Link>
         </div>
       )}
@@ -93,4 +96,4 @@ const HomeAirdrop: React.FC<HomeAirdropProps> = ({
   );
 };
 
-export default HomeAirdrop;
+export default HomeAirdrops;

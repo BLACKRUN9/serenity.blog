@@ -1,4 +1,4 @@
-import { ArticleCard, SnippetCard } from "@/components";
+import { SnippetCard, ArticleCard } from "@/components";
 import RelatedArticleCard from "../ArticleCards/RelatedArticleCard";
 interface RelatedArticleProps {
     relatedPosts: any;

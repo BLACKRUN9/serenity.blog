@@ -5,7 +5,7 @@ import useDeviceSize from "@/hooks/useDeviceSize";
 // import ForumAuthorCard from '../ForumAuthorCard/ForumAuthorCard'
 import GitHubComment from "@/components/GitHubComment/GitHubComment";
 
-const ForumFooter = ({ isLatest,relatedAirdrops,authorInfo,isSnippet }: any) => {
+const ForumFooter = ({ isGiveaways,relatedAirdrops,authorInfo,isLatest }: any) => {
   const deviceSize:any = useDeviceSize();
 
   const wrapperClasses =
@@ -45,8 +45,8 @@ const ForumFooter = ({ isLatest,relatedAirdrops,authorInfo,isSnippet }: any) => 
       )}
 
       <RelatedForums relatedAirdrops={relatedAirdrops}
-      isSnippet={isSnippet}
       isLatest={isLatest}
+      isGiveaways={isGiveaways}
       />
       </div>
     </>

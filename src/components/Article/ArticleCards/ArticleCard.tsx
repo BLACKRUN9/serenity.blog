@@ -11,10 +11,10 @@ import readingTime from "reading-time";
 interface IProp {
   article: IArticleHeaderData;
   path: string;
-  isGiveaways: boolean;
+  isExternal: boolean;
 }
 
-const ArticleCard = ({ article, path, isGiveaways }: IProp) => {
+const ArticleCard = ({ article, path, isExternal }: IProp) => {
   // set url and path
   const {
     // _createdAt,
@@ -74,7 +74,7 @@ const ArticleCard = ({ article, path, isGiveaways }: IProp) => {
               )}
             </p>
 
-            {isGiveaways ? (
+            {isExternal ? (
               <a href={path} target="_blank"
               rel="noopener noreferrer" 
               aria-label={`${title}`}

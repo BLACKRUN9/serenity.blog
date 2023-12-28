@@ -35,7 +35,7 @@ const Series = async () => {
                 noOfNews={6}
                 news={news}
                 isSeries={true}
-                isGiveaways={false}
+                isExternal={false}
             />
             ) : <p>No Press Release Found</p>
           }

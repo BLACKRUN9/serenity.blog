@@ -4,8 +4,11 @@ import {
     airdropsQuery,
     getAuthorsQuery,
     getSeriesQuery,
+    getGiveawaysQuery,
     getLegalsQuery,
     snippetsQuery,
+   
+    latestsQuery,
 } from "@/sanity/lib/queries";
 import { createClient} from "next-sanity";
 import clientConfig from "@/utils/sanity-client-config";
@@ -16,14 +19,14 @@ export default async function sitemap() {
     const baseUrl = WEBSITE_URL;
 
     const posts = await createClient(clientConfig).fetch(postsQuery);
-    const airdrops = await createClient(clientConfig).fetch(airdropsQuery);
 
     const postUrls = posts?.map((post) => ({
         url: `${baseUrl}/post/${post?.slug?.current}`,
         lastModified: post?.updatedAt,
     }));
-
-    const airdropUrls = posts?.map((airdrop) => ({
+    
+    const airdrops = await createClient(clientConfig).fetch(airdropsQuery);
+    const airdropUrls = airdrops?.map((airdrop) => ({
         url: `${baseUrl}/airdrop/${airdrop?.slug?.current}`,
         lastModified: airdrop?.updatedAt,
     }));
@@ -41,11 +44,24 @@ export default async function sitemap() {
         lastModified: series?.updatedAt,
     }));
 
+    const giveaways = await createClient(clientConfig).fetch(getGiveawaysQuery)
+    const giveawaysUrls = giveaways.map((series) => ({
+        url: `${baseUrl}/giveaways/${giveaways?.slug?.current}`,
+        lastModified: giveaways?.updatedAt,
+    }));
+
     const snippets = await createClient(clientConfig).fetch(snippetsQuery)
 
     const snippetsUrls = snippets.map((snippet) => ({
         url: `${baseUrl}/snippets/${snippet?.slug?.current}`,
         lastModified: snippet?.updatedAt,
+    }));
+
+    const latests = await createClient(clientConfig).fetch(latestsQuery)
+
+    const latestsUrls = latests.map((latest) => ({
+        url: `${baseUrl}/latests/${latest?.slug?.current}`,
+        lastModified: latest?.updatedAt,
     }));
 
     const legals = await createClient(clientConfig).fetch(getLegalsQuery)
@@ -64,14 +80,17 @@ export default async function sitemap() {
         { url: `${baseUrl}/tags`, lastModified: new Date() },
         { url: `${baseUrl}/news`, lastModified: new Date() },
         { url: `${baseUrl}/airdrop`, lastModified: new Date() },
-
+        { url: `${baseUrl}/giveaways`, lastModified: new Date() },
         { url: `${baseUrl}/snippets`, lastModified: new Date() },
+        { url: `${baseUrl}/latests`, lastModified: new Date() },
         { url: `${baseUrl}/categories`, lastModified: new Date() },
         { url: `${baseUrl}/series`, lastModified: new Date() },
         ...postUrls,
         ...airdropUrls,
         ...authorsUrls,
         ...seriesUrls,
+        ...giveawaysUrls,
+        ...latestsUrls,
         ...snippetsUrls,
         ...legalsUrls,
     ];

@@ -7,9 +7,9 @@ import { sanityFetch } from "@/sanity/lib/sanityFetch";
 import airdrop from "@/sanity/schemas/airdrop";
 
 export const metadata: Metadata = {
-    title: "Giveaway",
+    title: "Giveaways",
     description:
-        "Explore curated giveaway from Medium, Hashnode, and more. Gain insights into tech trends and coding expertise.",
+        "Explore curated giveaways from Medium, Hashnode, and more. Gain insights into tech trends and coding expertise.",
     keywords:
         "giveaway, tech insights, coding expertise, innovative ideas, Medium, Hashnode, tech trends, perspectives, trusted sources",
 };
@@ -33,7 +33,7 @@ const Giveaways = async () => {
                             isArchive={false}
                             noOfAirdrop={1}
                             airdrop={airdrop}
-                            isLatest={false}
+                            isEvent={false}
                             isGiveaways={true}
                         />
                     ) : (

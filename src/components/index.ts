@@ -10,6 +10,7 @@ export const ArticleCard =dynamic(()=>import('./Article/ArticleCards/ArticleCard
 export const LatestCard =dynamic(()=>import('./LatestCard/LatestCard'));
 
 export const SnippetCard = dynamic(() => import('./SnippetCard/SnippetCard'))
+
 export const OpenSourceCard =dynamic(()=>import('./OpenSourceCard/OpenSourceCard'));
 export const CategoryCard =dynamic(()=>import('./CategoryCard/CategoryCard'));
 export const Seperator = dynamic(() => import('./Seperator/Seperator'))

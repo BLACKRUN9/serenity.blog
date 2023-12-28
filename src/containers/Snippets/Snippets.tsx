@@ -7,31 +7,31 @@ import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai";
 
 interface SnippetsProps {
   isArchive: boolean;
-  airdrop: any;
+  snippet: any;
   noOfSnippet: number;
 }
 
 const Snippets: React.FC<SnippetsProps> = ({
   isArchive,
-  airdrop,
+  snippet,
   noOfSnippet,
 }) => {
   const articlesPerPage = noOfSnippet || 9;
 
   // const [articles, setArticles] = useState([]);
 
-  const [currentItems, setCurrentItems] = useState(airdrop || []);
+  const [currentItems, setCurrentItems] = useState(snippet || []);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
     const endOffset = itemOffset + articlesPerPage;
-    setCurrentItems(airdrop?.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(airdrop?.length / articlesPerPage));
-  }, [itemOffset, articlesPerPage, airdrop]);
+    setCurrentItems(snippet?.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(snippet?.length / articlesPerPage));
+  }, [itemOffset, articlesPerPage, snippet]);
 
   const handlePageClick = (event: any) => {
-    const newOffset = (event.selected * articlesPerPage) % airdrop?.length;
+    const newOffset = (event.selected * articlesPerPage) % snippet?.length;
     setItemOffset(newOffset);
   };
 
@@ -54,7 +54,7 @@ const Snippets: React.FC<SnippetsProps> = ({
       </div>
       <br />
 
-      {!isArchive && airdrop?.length > articlesPerPage  && (
+      {!isArchive && snippet?.length > articlesPerPage  && (
         <div className="flex flex-col justify-center">
           <ReactPaginate
             breakLabel="..."

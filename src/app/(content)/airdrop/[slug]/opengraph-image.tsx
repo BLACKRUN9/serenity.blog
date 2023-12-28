@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-import { ImageResponse } from "next/server";
+import { ImageResponse } from 'next/og'
 import { urlFor } from "@/utils/sanity-utils";
 import { airdropQuery} from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
@@ -26,7 +25,7 @@ export default async function og({ params }: Props) {
 
     return new ImageResponse(
         (
-            <div tw='relative flex items-center justify-center'>
+            <div tw='relative fixed flex items-center justify-center'>
                 <img
                     src={`${urlFor(airdrop?.mainImage?.asset?._ref)}`}
                     alt={airdrop?.title}

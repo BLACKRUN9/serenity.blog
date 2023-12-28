@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-import { ImageResponse } from "next/server";
+import { ImageResponse } from 'next/og'
 import { urlFor } from "@/utils/sanity-utils";
 import { postQuery} from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";

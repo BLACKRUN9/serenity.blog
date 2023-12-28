@@ -6,7 +6,7 @@ import { SanityDocument } from "@sanity/client";
 import { snippetsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
 export const metadata: Metadata = {
-  title:'tutorliar',
+  title:'tutorial',
   description: `Explore tutorial by ${WEBSITE_NAME}. Discover quick tips, code examples, and insights for your coding journey.`,
   keywords: 'tutorial, airdrop, news, insights',
 };
@@ -33,7 +33,7 @@ const Snippets = async () => {
             allSnippets?.length > 0 ? (
               <SnippetsContainer 
          isArchive={false}
-         airdrop={allSnippets}
+         snippet={allSnippets}
          noOfSnippet={9}
          />
             ) : <p> Tutorial</p>

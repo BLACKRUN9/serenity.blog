@@ -1,5 +1,4 @@
-import {defineField, defineType} from 'sanity'
-
+import { defineField, defineType } from "sanity";
 
 export default defineType({
   name: "airdrop",
@@ -71,18 +70,18 @@ export default defineType({
     // create a boolen field if it is an article is a part of any series if it is true then create another field which add series
 
     defineField({
-      name: "isLatest",
-      title: "Is Latest",
+      name: "isGiveaways",
+      title: "Is Giveaways",
       type: "boolean",
       options: {
         layout: "checkbox",
       },
     }),
     defineField({
-      name: "latest",
-      title: "Latest",
+      name: "giveaways",
+      title: "Giveaways",
       type: "reference",
-      to: { type: "latest" },
+      to: { type: "giveaways" },
     }),
 
     defineField({
@@ -104,3 +103,4 @@ export default defineType({
     },
   },
 });
+
