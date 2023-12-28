@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { ImageResponse } from 'next/og'
+import { ImageResponse } from "next/server"
 import { urlFor } from "@/utils/sanity-utils";
 import { snippetQuery} from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
