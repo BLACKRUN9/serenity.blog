@@ -25,11 +25,11 @@ const RelatedForum: React.FC<RelatedForumProps> = ({
                               .slice(0, 2)
                               .map((each: any, i: number) => (
                                   <RelatedForumCard
-                                   airdrop={each}
+                                   forum={each}
                                       key={i + each._id}
                                       isEvent={false}
                                       previousAirdrop={false}
-                                isSeries={false}
+                                isGiveaways={false}
                                       path={`/airdrop/${each.slug.current}`}
                                   />
                               ))
