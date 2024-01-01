@@ -4,7 +4,6 @@ import { Footer } from "@/components";
 import NavbarSeren from '../components/NavbarSeren/NavbarSeren'
 // import NavbarTree from '@/components/NavbarTree/NavbarTree';
 // import { Dropdown }  from "@/components"; 
-
 export default function RootLayout({
   children,
 }: {
@@ -15,10 +14,12 @@ export default function RootLayout({
        
 
         <ThemeProvider enableSystem={true} attribute="class">
-          <div className="flex flex-col ">
-           <NavbarSeren />
+          <div className="flex flex-col min-h-screen h-full">
            {/* <NavbarTree />  */}
-           
+          <div className="">
+          <NavbarSeren />
+          </div>
+          
         
           {children}
           </div>

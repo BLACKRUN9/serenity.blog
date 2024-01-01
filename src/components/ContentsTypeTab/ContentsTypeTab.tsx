@@ -18,12 +18,12 @@ const ContentsTypeTab = () => {
               : "";
 
             return (
-              <li className={`px-4 pb-2 hover:text-appRed-100 shadow-lg hover:shadow-none transition-all mb-3 md:mx-5 mx-2 transform hover:scale-105 w-auto text-2xl font-bold cursor-pointer ${linkClass}`} key={index}>
+              <li className={`px-4 pb-2 rounded-lg hover:text-appRed-100 shadow-lg dark:shadow-md shadow-appVeronica-100 dark:shadow-appRed-100 hover:shadow-none transition-all mb-3 md:mx-5 mx-2 transform hover:scale-105 w-auto text-2xl font-bold cursor-pointer ${linkClass}`} key={index}>
                 <Link href={content.url}>{content.name}</Link>
               </li>
             );
           })}
-          <li className={`px-4 pb-2 hover:text-appRed-100 shadow-lg hover:shadow-none transition-all mb-3 md:mx-5 mx-2 transform hover:scale-105 w-auto text-2xl font-bold cursor-pointer`} >
+          <li className={`px-4 pb-2 hover:text-appRed-100 shadow-lg hover:shadow-none shadow-appVeronica-100 dark:shadow-appRed-100 rounded-md transition-all mb-3 md:mx-5 mx-2 transform hover:scale-105 w-auto text-2xl font-bold cursor-pointer`} >
                 <a href={"/"}
             target="_blank"
             rel="noreferrer">Airdrop List</a>

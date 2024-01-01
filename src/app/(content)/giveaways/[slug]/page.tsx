@@ -3,9 +3,8 @@ import { HomeAirdrops } from "@/containers";
 import {slugToTitle} from "@/utils/utils";
 import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
-import { getGiveawaysRelatedAirdropQuery} from "@/sanity/lib/queries";
+import { getGiveawaysRelatedAirdropQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
-import airdrop from "@/sanity/schemas/airdrop";
 
 interface Props {
   params: {
@@ -32,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 
 const GiveawaysDetail = async ({ params }: { params: { slug: string } }) => {
-  const forums = await sanityFetch<SanityDocument>({
+  const articles = await sanityFetch<SanityDocument>({
     query: getGiveawaysRelatedAirdropQuery,
     params,
   });
@@ -43,7 +42,7 @@ const GiveawaysDetail = async ({ params }: { params: { slug: string } }) => {
         <Breadcrumbs pageName="Giveaways" pageSlug={title} pageLink="/giveaways" />
         
         {
-          !forums ? (
+          !articles ? (
             <p>No Giveaways Found</p>
           ) : (<>  <Text
             title
@@ -55,13 +54,13 @@ const GiveawaysDetail = async ({ params }: { params: { slug: string } }) => {
           </Text>
           <div className={"flex flex-wrap flex-col"}>
             
-             {forums ? (
+             {articles ? (
                           <HomeAirdrops
-                          isArchive={false} noOfAirdrop={9} airdrop={airdrop}
-                          isGiveaways={false} isEvent={false}
+                          isArchive={false} noOfAirdrop={9} airdrop={articles}
+                          isGiveaways={true} isEvent={false}
                           />
                       ) : (
-                          <p>No Giveaways Found</p>
+                          <p>No Article Found</p>
                       )}
           </div></>)
         }

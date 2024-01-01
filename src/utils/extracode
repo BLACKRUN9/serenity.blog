@@ -437,12 +437,12 @@ export async function getGiveawaysRelatedAirdrop(slug: string): Promise<any> {
         slug,
         "tags": tags[]-> {title,slug},
         "category": categories[]-> {title,slug},
-        "giveaways":giveaways> {title,slug},
+        "giveaways":giveaways-> {title,slug},
 }
 `,
     { slug }
   );
-
+}
 
 export async function getSnippets(): Promise<any> {
   return createClient(clientConfig).fetch(

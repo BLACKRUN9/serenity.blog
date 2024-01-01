@@ -1,7 +1,7 @@
 "use client"
 
 import { Menu, Transition } from '@headlessui/react'
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const links = [
@@ -17,7 +17,7 @@ export default function Example() {
     <div className=" z-20 justify-items-center text-right backdrop-blur-xl  ">
       <Menu as="div" className="relative inline-block  text-left">
         <div>
-         <Menu.Button className="inline-flex justify-center w-15 rounded-md px-1 py-2 text-sm font-medium text-white ">
+         <Menu.Button className="inline-flex justify-center w-15 bg-black/40 px-6 hover:translate-y-2 transition duration-700 md:hidden hover:dark:bg-appFuchsia-100 dark:bg-appRed-100  rounded-md px-1 py-2 text-sm font-medium text-black dark:text-appSmoky-900">
             Seren
             <ChevronDownIcon
               className="-mr-1 ml-2 h-5 w-5 text-grey-100 "

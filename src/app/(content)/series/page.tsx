@@ -20,7 +20,6 @@ const Series = async () => {
         <section className='container px-3 pt-20 md:pb-20 md:pt-10'>
             <div className='mt-19'>
                 <ContentsTypeTab />
-
                 <Text
                     title
                     className='mb-5 mt-10 text-black-100 dark:text-appRed-100'

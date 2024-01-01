@@ -11,7 +11,7 @@ const MenuComponent = () => {
       <div className="relative  text-left">
         <button
           onClick={() => setOpen(!open)}
-          className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 rounded-md "
+          className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-black dark:text-gray-700 rounded-md "
         >
           Menu
           <svg
