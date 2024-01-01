@@ -8,6 +8,7 @@ import { format } from "date-fns";
 import Link from "next/link";
 
 const ForumHeader = ({ FORUM_DETAILS, isLatest }: any) => {
+
     const {
         title, author,
         publishedAt,

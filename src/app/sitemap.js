@@ -45,7 +45,7 @@ export default async function sitemap() {
     }));
 
     const giveaways = await createClient(clientConfig).fetch(getGiveawaysQuery)
-    const giveawaysUrls = giveaways.map((series) => ({
+    const giveawaysUrls = giveaways.map((giveaways) => ({
         url: `${baseUrl}/giveaways/${giveaways?.slug?.current}`,
         lastModified: giveaways?.updatedAt,
     }));

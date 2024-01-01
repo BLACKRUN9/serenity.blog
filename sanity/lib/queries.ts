@@ -51,19 +51,18 @@ export const getRandomSnippetsQuery = groq`*[_type == "snippet"] | order(_create
     publishedAt,
   }[0..2]`;
 
-export const getRelatedSeriesPostForSinglePostQuery = groq`*[_type == "post" && isSeries == true && series-> slug.current == $slug]{
-      _id,_createdAt,
-            title,
-            body,
-            "author": author -> {name,slug,image,designation,profiles,bio,about},
-            meta_description,
-            mainImage,
-            slug,
-            "tags": tags[]-> {title,slug},
-            "category": categories[]-> {title,slug},
-            "series":series-> {title,slug},
-            publishedAt,
-    }[0..2]`;
+  export const getRelatedSeriesPostForSinglePostQuery = groq`*[_type == "post" && isSeries == true && series-> slug.current == $slug]{
+    _id,_createdAt,
+          title,
+          body,
+          "author": author -> {name,slug,image,designation,profiles,bio,about},
+          meta_description,
+          mainImage,
+          slug,
+          "tags": tags[]-> {title,slug},
+          "category": categories[]-> {title,slug},
+          "series":series-> {title,slug},
+  }[0..2]`;
 
 
     export const getRelatedGiveawaysAirdropForSingleAirdropQuery = groq`*[_type == "airdrop" && isGiveaways == true && giveaways-> slug.current == $slug]{
@@ -375,40 +374,40 @@ export const getExternalRelatedPostQuery = groq`*[_type == "post" && series-> sl
 // ======================== Series ================================
 
 export const getSeriesQuery = groq`*[_type == "series"]{
-      _createdAt,
+  _createdAt,
+title,
+body,
+"author": author -> {name,slug,image,designation,profiles,bio,about},
+meta_description,
+mainImage,
+slug,
+publishedAt,
+"tags": tags[]-> {title,slug},
+"category": categories[]-> {title,slug},
+"numberOfCharacters": length(pt::text(body)),
+"estimatedWordCount": round(length(pt::text(body)) / 5),
+"estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 ),
+"mainImageWidth": mainImage.asset->metadata.dimensions.width,
+"mainImageHeight": mainImage.asset->metadata.dimensions.height
+}`;
+
+export const getSeriesRelatedPostQuery = groq`*[_type == "post" && series-> slug.current == $slug] {
+  _id,_createdAt,
+  publishedAt,
     title,
-    post,
+    body,
     "author": author -> {name,slug,image,designation,profiles,bio,about},
     meta_description,
     mainImage,
     slug,
-    publishedAt,
     "tags": tags[]-> {title,slug},
     "category": categories[]-> {title,slug},
+    "series":series-> {title,slug},
     "numberOfCharacters": length(pt::text(body)),
 "estimatedWordCount": round(length(pt::text(body)) / 5),
 "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 ),
 "mainImageWidth": mainImage.asset->metadata.dimensions.width,
-  "mainImageHeight": mainImage.asset->metadata.dimensions.height
-    }`;
-
-export const getSeriesRelatedPostQuery = groq`*[_type == "post" && series-> slug.current == $slug] {
-      _id,_createdAt,
-      publishedAt,
-        title,
-        body,
-        "author": author -> {name,slug,image,designation,profiles,bio,about},
-        meta_description,
-        mainImage,
-        slug,
-        "tags": tags[]-> {title,slug},
-        "category": categories[]-> {title,slug},
-        "series":series-> {title,slug},
-        "numberOfCharacters": length(pt::text(body)),
-"estimatedWordCount": round(length(pt::text(body)) / 5),
-"estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 ),
-"mainImageWidth": mainImage.asset->metadata.dimensions.width,
-  "mainImageHeight": mainImage.asset->metadata.dimensions.height,
+"mainImageHeight": mainImage.asset->metadata.dimensions.height,
 }`;
 
 export const seriesNextAndPerviousPostOfRelatedPost = groq`

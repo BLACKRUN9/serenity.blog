@@ -13,7 +13,7 @@ import {
 } from "@/components";
 import { AiOutlineArrowUp } from "react-icons/ai";
 
-const Blog = ({ airdrop, relatedAirdrops, isLatest,isGiveaways }: any) => {
+const BlogAirdrop = ({ airdrop, relatedAirdrops, isLatest, isGiveaways }: any) => {
   const target: RefObject<HTMLDivElement> = React.createRef();
   const authorInfo=airdrop?.author
   const isBrowser = () => typeof window !== 'undefined';
@@ -72,4 +72,4 @@ const Blog = ({ airdrop, relatedAirdrops, isLatest,isGiveaways }: any) => {
   );
 };
 
-export default Blog;
+export default BlogAirdrop;

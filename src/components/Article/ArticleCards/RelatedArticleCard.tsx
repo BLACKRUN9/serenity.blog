@@ -16,7 +16,7 @@ interface IProp {
     isSeries:boolean
 }
 
-const RelatedArticleCard = ({ news, path,isExternal }: IProp) => {
+const RelatedArticleCard = ({ news, path, isExternal }: IProp) => {
     // set url and path
     
     const {

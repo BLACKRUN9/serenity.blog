@@ -8,8 +8,15 @@ import { format } from "date-fns";
 import Link from "next/link";
 
 const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
+    // Check if ARTICLE_DETAILS is null or undefined
+    if (!ARTICLE_DETAILS) {
+        // Handle the case where ARTICLE_DETAILS is null or undefined
+        return <div>Loading...</div>; // or any other appropriate handling
+    }
+
     const {
-        title, author,
+        title,
+        author,
         publishedAt,
         _updatedAt,
         mainImage,

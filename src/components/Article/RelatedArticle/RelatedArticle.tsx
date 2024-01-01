@@ -50,12 +50,12 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                               .slice(0, 2)
                               .map((each: any, i: number) => (
                                   <RelatedArticleCard
-                                      article={each}
+                                      news={each}
                                       key={i + each._id}
                                       isExternal={false}
                                       previousPost={false}
                                       isSeries={true}
-                                      path={`/articles/${each.slug.current}`}
+                                      path={`/news/${each.slug.current}`}
                                   />
                               ))
                         : null} */}
@@ -66,7 +66,7 @@ const RelatedArticles: React.FC<RelatedArticleProps> = ({
                         !isSnippet &&
                         relatedPosts?.previousPost != null && (
                             <RelatedArticleCard
-                                article={relatedPosts?.perviousPost}
+                                news={relatedPosts?.perviousPost}
                                 isExternal={false}
                                 previousPost={true}
                                 isSeries={true}

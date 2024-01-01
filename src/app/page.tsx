@@ -16,8 +16,8 @@ import { Suspense } from "react";
 import { Metadata } from 'next'
 import {WEBSITE_NAME,META_DESCRIPTION} from '@/constants/_APP_SETUP'
 import CounterSection from "@/components/CounterSection/CounterSection"
-import  EventSection  from "../components/EventSection/EventSection";
 import React, { RefObject } from "react";
+import  EventSection  from "../components/EventSection/EventSection";
 
 
 
@@ -76,8 +76,10 @@ export default async function Home() {
                 }
                 key={Math.random()}
 
-            >
+            >           
+                <div className="">
                 
+                </div>
                 <EventSection />
                 <HeroSection />
                 <CounterSection />

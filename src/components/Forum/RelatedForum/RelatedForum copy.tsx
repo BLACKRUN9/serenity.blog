@@ -1,13 +1,12 @@
-import { ForumCard, LatestCard } from "@/components";
-import RelatedForumCard from "../RelatedForum/RelatedForum";
-
+import { LatestCard } from "@/components";
+import RelatedFoumCard from "../ForumCards/RelatedForumCard";
 interface RelatedForumProps {
     relatedAirdrops: any;
     isLatest: boolean;
     isGiveaways: boolean;
 }
 
-const RelatedForum: React.FC<RelatedForumProps> = ({
+const RelatedForums: React.FC<RelatedForumProps> = ({
     relatedAirdrops,
     isLatest,
     isGiveaways,
@@ -24,8 +23,8 @@ const RelatedForum: React.FC<RelatedForumProps> = ({
                         ? relatedAirdrops
                               .slice(0, 2)
                               .map((each: any, i: number) => (
-                                  <RelatedForumCard
-                                   forum={each}
+                                  <RelatedFoumCard
+                                      forum={each}
                                       key={i + each._id}
                                       isEvent={false}
                                       previousAirdrop={false}
@@ -51,14 +50,14 @@ const RelatedForum: React.FC<RelatedForumProps> = ({
 
                     {isSeries &&
                         !isLatest &&
-                        relatedAirdrops?.previousAirdrop != null && (
+                        relatedAirdrops?.previousPost != null && (
                            
-                            <RelatedForumCard
-                               airdrop={relatedAirdrops.perviousAirdrop}
-                                isExternal={false}
+                            <RelatedFoumCard
+                                forum={relatedAirdrops?.perviousPost}
+                                isEvent={false}
                                 previousAirdrop={true}
                                 isGiveaways={true}
-                                path={`/airdrop/${relatedAirdrops?.perviousAirdrop?.slug.current}`}
+                                path={`/news/${relatedAirdrops?.perviousAirdropt?.slug.current}`}
                             />
                             
                            
@@ -66,7 +65,7 @@ const RelatedForum: React.FC<RelatedForumProps> = ({
 
                     {isGiveaways &&
                         !isLatest &&
-                        relatedAirdrops?.previousAirdrop === null || relatedAirdrops?.nextAirdrop === null &&(
+                        relatedAirdrops?.previousPost === null || relatedAirdrops?.nextPost === null &&(
                            
                             <p
                             className={
@@ -80,16 +79,16 @@ const RelatedForum: React.FC<RelatedForumProps> = ({
                         )}    
                     
                     {console.log('this is',relatedAirdrops?.nextAirdrop)}
-                    {isLatest &&
+                    {isGiveaways &&
                         !isLatest &&
                         relatedAirdrops?.nextPost != null && (
                             
-                            <RelatedForumCard
-                                airdrop={relatedAirdrops?.nextAirdrop}
+                            <RelatedFoumCard
+                                forum={relatedAirdrops?.nextAirdrop}
                                 isEvent={false}
                                 previousAirdrop={false}
-                                isLatest={true}
-                                path={`/airdrop/${relatedAirdrops?.nextAirdrop?.slug.current}`}
+                                isGiveaways={true}
+                                path={`/news/${relatedAirdrops?.nextPost?.slug.current}`}
                             />
                            
                         )}
@@ -101,4 +100,4 @@ const RelatedForum: React.FC<RelatedForumProps> = ({
     );
 };
 
-export default RelatedForum;
+export default RelatedForums;

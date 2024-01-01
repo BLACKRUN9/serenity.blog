@@ -13,7 +13,7 @@ import {
 } from "@/components";
 import { AiOutlineArrowUp } from "react-icons/ai";
 
-const Blog = ({ post, relatedPosts, isSnippet,isSeries }: any) => {
+const Blog = ({ post, relatedPosts, isSnippet, isSeries }: any) => {
   const target: RefObject<HTMLDivElement> = React.createRef();
   const authorInfo=post.author
   const isBrowser = () => typeof window !== 'undefined';

@@ -40,21 +40,21 @@ const HomeArticles: React.FC<HomeArticleProps> = ({
   };
   // console.log(news,'news')
 
-  const newsToDisplay = noOfNews  || 3;
+  const newsToDisplay = noOfNews  || 9;
   
   return (
     
     <>
-      <div className="flex flex-wrap">
-        {currentItems
+       <div className="flex flex-wrap">
+       {currentItems
           ? (currentItems as any)
               .slice(0, newsToDisplay)
               .map((each: any, i: number) => (
                 <ArticleCard
                   article={each}
                   key={i}
-                  isExternal={isExternal}
-                  path={`${isSeries ? "/press-release/":isExternal?'':"/news/"}${each.slug.current}`}
+                  isExternal={true}
+                  path={`${isSeries? "/series/":isExternal?'/external-articles/':"/news/"}${each.slug.current}`}
                 />
               ))
           : null}

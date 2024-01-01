@@ -28,7 +28,10 @@ const allTypesContent: ContentType[] = [
     name: "Tutorial",
     url: "/tutorial",
   },
-  
+  {
+    name: "Series",
+    url: "/series",
+  },
   
 ];
 

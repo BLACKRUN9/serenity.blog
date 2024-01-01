@@ -1,4 +1,7 @@
-import { Text } from "@/components";
+
+
+
+import { Text, ContentsTypeTab } from "@/components";
 import { HomeAirdrops } from "@/containers";
 import { Metadata } from "next";
 import { SanityDocument } from "@sanity/client";
@@ -21,6 +24,7 @@ const Giveaways = async () => {
     return (
         <section className='container px-3 pt-20 md:pb-20 md:pt-10'>
             <div className='mt-19'>
+                <ContentsTypeTab />
                 <Text
                     title
                     className='center mb-5 mt-10 text-appPurple-100 dark:text-appRed-100'

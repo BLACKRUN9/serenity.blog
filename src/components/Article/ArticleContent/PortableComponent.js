@@ -1,7 +1,7 @@
 import Link from "next/link";
 import CopyableCodeBlock from './CopyableCodeBlock'
 import ImagePortableCom from './ImagePortableCom'
-const articePortableText = {
+const articlePortableText = {
     block: {
       normal: ({ children }) => <p className="my-8 text-base md:text-lg">{children}</p>,
       h1: ({ children }) => <h1 className="font-semibold text-3xl my-8 leading-tight md:text-4xl">{children}</h1>,
@@ -51,4 +51,4 @@ const articePortableText = {
     },
   };
 
-  export default articePortableText
+  export default articlePortableText

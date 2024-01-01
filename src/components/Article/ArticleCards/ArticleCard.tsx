@@ -75,29 +75,34 @@ const ArticleCard = ({ article, path, isExternal }: IProp) => {
             </p>
 
             {isExternal ? (
-              <a href={path} target="_blank"
-              rel="noopener noreferrer" 
-              aria-label={`${title}`}
-              >
-                <h1
+  <a
+    href={path} 
+    target="_blank"
+    rel="noopener noreferrer" 
+    aria-label={title}
+    
+  >
+     <h1
                   className={
                     "text-[16px] font-bold cursor-pointer tracking-wide hover:text-appRed-100 transition-colors duration-300 md:text-[22px]"
                   }
                 >
-                  {title}
-                </h1>
-              </a>
-            ) : (
-              <Link href={path}>
-                <h1
-                  className={
-                    "text-[16px] font-bold cursor-pointer tracking-wide hover:text-appRed-100 transition-colors duration-300 md:text-[22px]"
-                  }
-                >
-                  {title}
-                </h1>
-              </Link>
-            )}
+
+                
+    {title}
+    </h1>
+  </a>
+) : (
+  <Link href={path} passHref>
+    <h1
+      className={
+        "text-[16px] font-bold cursor-pointer tracking-wide hover:text-appRed-100 transition-colors duration-300 md:text-[22px]"
+      }
+    >
+      {title}
+    </h1>
+  </Link>
+)}
             
             <p
               className={combineClasses(
