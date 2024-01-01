@@ -1,4 +1,4 @@
-import { ImageResponse } from "next/server"
+import  ImageResponse  from "next/server"
 import { urlFor } from "@/utils/sanity-utils";
 import { airdropQuery} from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/sanityFetch";
