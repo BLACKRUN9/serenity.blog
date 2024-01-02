@@ -14,13 +14,13 @@ export default function RootLayout({
        
 
         <ThemeProvider enableSystem={true} attribute="class">
-          <div className="flex flex-col min-h-screen h-full">
-           {/* <NavbarTree />  */}
-          <div className="">
-          <NavbarSeren />
-          </div>
           
-        
+           {/* <NavbarTree />  */}
+          
+          <NavbarSeren />
+       
+          
+          <div className="flex-grow">
           {children}
           </div>
           <Footer/>
