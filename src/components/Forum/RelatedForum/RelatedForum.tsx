@@ -17,7 +17,7 @@ const RelatedForums: React.FC<RelatedForumProps> = ({
         <>
             <div className='container mx-auto mt-20 px-0 lg:px-[15px]'>
                 <div className={"flex flex-wrap"}>
-                    <h1 className='mb-5 w-full px-3 text-xl font-bold text-appSeren-100 dark:text-appRed-100 md:text-3xl'>
+                    <h1 className='mb-5 w-full px-3 text-xl font-bold text-appSmoky-900 dark:text-appRed-100 md:text-3xl'>
                         READ MORE {isGiveaways ? "GIVEAWAYS" : "AIRDROP"}
                     </h1>
                     <hr className='border-1 mx-auto mb-5 w-[98%]' />

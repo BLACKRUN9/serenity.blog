@@ -47,8 +47,8 @@ const openSearch = () => {
 
 
   return (
-    <div className="fixed backdrop-blur-sm w-full dark:z-50 dark:top-0 dark:left-0  z-20 top-0 left-0  transition-all ease-out-expo duration-700 dark:transition-all dark:ease-out-expo dark:duration-700 bg-transparent dark:bg-transparent font-bold   ">
-      <nav className="flex fixed absolute inset-x-0 top-0 h-16  justify-center items-center w-full border border-slate-600 backdrop-blur-sm transition-all ease-out-expo duration-700 bg-transparent dark:bg-transparent">
+    <div className="fixed block backdrop-blur backdrop-blur-sm w-full  dark:top-0 dark:left-0  z-50 top-0 left-0  transition-all ease-out-expo duration-700 dark:transition-all dark:ease-out-expo dark:duration-700 bg-transparent -mt-6  dark:bg-transparent font-bold   ">
+      <nav className="flex inline-block  visible relative justify-center backdrop-blur items-center w-full border border-slate-600 backdrop-blur-sm transition-all ease-out-expo duration-700 bg-transparent dark:bg-transparent">
         <div className="flex items-center">
           <div className="text-white mr-2">
           

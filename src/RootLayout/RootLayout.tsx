@@ -20,7 +20,7 @@ export default function RootLayout({
           <NavbarSeren />
        
           
-          <div className="flex-grow">
+          <div className="flex-grow pb-6">
           {children}
           </div>
           <Footer/>
