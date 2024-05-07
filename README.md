@@ -4,14 +4,6 @@
 
 📝 Welcome to my Personal Blog!  🌐 Explore my thoughts, ideas, and experiences on a variety of tech topics through my personal blog website. Built with Sanity, Next.js (version 13), and Tailwind CSS, it's a platform where I share insights and knowledge with the world.
 
-## Live Website
-
-You can visit the live website [here](https://syedamaham.dev).
-
-## Full Version Website
-
-You can visit the full version of the website [here](https://syedamaham-dev-git-full-version-with-mul-09d4b2-syedamahamfahim.vercel.app/)
-
 ## What's Included
 
 - **Blog Posts on Various Tech Topics:** I am excited to present our collection of informative and engaging tech blog posts covering a wide range of topics.
@@ -78,7 +70,7 @@ Your support is sincerely appreciated.
 
 ## Contact
 
-If you have any questions or suggestions, feel free to contact me at [syedamahamfahim@gmail.com](mailto:syedamahamfahim@gmail.com).
+
 
 ---
 
