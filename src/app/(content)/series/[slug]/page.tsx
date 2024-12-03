@@ -38,7 +38,7 @@ const SeriesDetail = async ({ params }: { params: { slug: string } }) => {
   const title=slugToTitle(params.slug)
   return (
     <section className="container px-3 md:pb-20 md:pt-10 pt-20">
-      <div className="mt-19">
+      <div className="mt-19 pt-6">
         <Breadcrumbs pageName="Series" pageSlug={title} pageLink="/series" />
         
         {

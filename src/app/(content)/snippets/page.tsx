@@ -19,7 +19,7 @@ const Snippets = async () => {
 
   return (
     <section className="container px-3 md:pb-20 md:pt-10 pt-20  dark:text-appRed-100 text-appBackgroud-100">
-      <div className="mt-19">
+      <div className="mt-19 pt-12">
         <ContentsTypeTab />
 
         <Text

@@ -18,9 +18,8 @@ const Series = async () => {
     });
     return (
         <section className='container px-3 pt-20 md:pb-20 md:pt-10'>
-            <div className='mt-19'>
+            <div className='mt-19 pt-12'>
                 <ContentsTypeTab />
-
                 <Text
                     title
                     className='mb-5 mt-10 text-black-100 dark:text-appRed-100'

@@ -19,7 +19,7 @@ const Airdrop = async () => {
 
   return (
     <section className="container px-3 pt-20 md:pb-20 md:pt-10">
-      <div className="mt-19">
+      <div className="mt-19 pt-16">
         <ContentsTypeTab />
 
         <Text

@@ -77,7 +77,7 @@ export default async function Home() {
                 key={Math.random()}
 
             >           
-                <div className="">
+                <div className="pt-6">
                 
                 </div>
                 <EventSection />

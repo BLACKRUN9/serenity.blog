@@ -22,7 +22,7 @@ const ForumHeader = ({ FORUM_DETAILS, isLatest }: any) => {
     } = FORUM_DETAILS;
 
     return (
-        <div className='mb-[30px] font-bold'>
+        <div className='mb-[30px] pt-12 font-bold'>
             <h1
                 className={combineClasses(
                     classes.articleTitle,

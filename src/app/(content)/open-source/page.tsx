@@ -21,7 +21,7 @@ const OpenSource = async () => {
     <>
     
       <section className="container px-3 md:pb-20 md:pt-10 pt-20">
-        <div className="mt-19">
+        <div className="mt-19 pt-12">
           <ContentsTypeTab />
 
           <Text

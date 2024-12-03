@@ -28,7 +28,7 @@ const ArticleHeader = ({ ARTICLE_DETAILS, isSnippet }: any) => {
     } = ARTICLE_DETAILS;
 
     return (
-        <div className='mb-[60px] pb-4 font-bold'>
+        <div className='mb-[60px] pt-12 pb-4 font-bold'>
             <h1
                 className={combineClasses(
                     classes.articleTitle,

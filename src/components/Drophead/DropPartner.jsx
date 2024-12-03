@@ -1,7 +1,7 @@
 "use client"
 
 import { Menu, Transition } from '@headlessui/react'
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const links = [
@@ -17,7 +17,7 @@ export default function Example() {
     <div className="justify-items-center text-right inline-block backdrop-blur-xl">
       <Menu as="div" className="relative inline-block  text-left">
         <div>
-         <Menu.Button className="border border-4 border-b-emerald-400 border-s-emerald-400 border-e-cyan-400 border-t-cyan-400 shadow-lg hover:shadow-lg shadow-emerald-400 hover:shadow-appCyan-100 rounded-md dark:drop-shadow-lg ring-2 ring-white ring-offset-2 ring-offset-slate-50 dark:ring-offset-appSmoky-900 bg-black/40 inline-flex justify-center rounded-md bg-black/40 px-12 py-2 text-sm font-medium text-white bg-transparent  focus-visible:ring-2 focus-visible:ring-white/75">
+         <Menu.Button className="border border-4 border-b-emerald-400 border-s-emerald-400 border-e-cyan-400 border-t-cyan-400 shadow-lg hover:shadow-lg shadow-emerald-400 hover:shadow-appCyan-100 rounded-md dark:drop-shadow-lg ring-2 ring-white ring-offset-2 ring-offset-slate-50 dark:ring-offset-appSmoky-900 bg-black/40 inline-flex justify-center rounded-md bg-black/40 px-12 py-2 text-sm font-medium text-black dark:text-white bg-transparent  focus-visible:ring-2 focus-visible:ring-white/75">
             Menu
             <ChevronDownIcon
               className="-mr-1 ml-2 h-5 w-5 text-grey-100 "

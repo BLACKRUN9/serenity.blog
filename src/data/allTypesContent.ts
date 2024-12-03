@@ -32,7 +32,10 @@ const allTypesContent: ContentType[] = [
     name: "Series",
     url: "/series",
   },
-  
+  {
+    name: "Giveaways",
+    url: "/giveaways",
+  },
 ];
 
 export default allTypesContent;
